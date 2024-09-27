@@ -1,0 +1,202 @@
+/* l-header
+----------------------------------------------------------------- */
+@use "../global" as g;
+
+.l-header {
+    position: fixed;
+    top: -100px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 28px 27.9px 0  42.7px;
+    transition: top 0.5s ease-in-out;
+    @include g.tabletS {
+        align-items: center;
+        padding-left: 15.6px;
+        padding: 0.3px 0 0.3px 15.6px
+    }
+
+    &--btnRight {
+      @extend .l-header;
+      @include g.tabletS {
+        justify-content: flex-end;
+      }
+    }
+
+    &--greenGradient {
+      @extend .l-header;
+      @include g.tabletS {
+        background: var(--dark-gradation-reverse);
+      }
+    }
+
+    &--colorBlack {
+      @extend .l-header;
+
+      .c-drawer__icon {
+        @include g.tabletS {
+          background: var(--black); 
+        }
+
+        &::before, &::after {
+          @include g.tabletS {
+            background: var(--black);
+          }
+        }
+      }
+    }
+
+    &.is-scroll {
+      top: 0;
+    }
+
+    &__logo {
+        margin-top: 8px;
+        @include g.tabletS {
+            width: 100%;
+            max-width: 82.73px;
+            height: auto;
+            margin-top: 0;
+            position: relative;
+            top: -2.3px;
+        }
+
+        &--spNone {
+          @extend .l-header__logo;
+          @include g.tabletS {
+            display: none;
+          }
+        }
+    }
+
+    &__logoLink {
+        display: block;
+        transition: opacity 0.3s;
+
+        &:hover {
+            @include g.hover {
+                opacity: .6;
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__nav {
+        margin-left: auto;
+    }
+
+    &__menu {
+        display: flex;
+    }
+
+    &__menuItem {
+        margin-right: -3px;
+
+        &:nth-child(1) {
+            .l-header__menuLink {
+                min-width: 144.19px;
+                height: 44.53px;
+                background: url(../images/common/nav_bg1.png) no-repeat center center/contain;
+
+                &::after {
+                    background: url(../images/common/icon_speechzBubble_color.png) no-repeat center center/contain;
+                }
+            }
+
+            .l-header__round {
+                max-width: 85.85px;
+            }
+        }
+
+        &:nth-child(2) {
+            .l-header__menuLink {
+                min-width: 190.97px;
+                height: 44.53px;
+                background: url(../images/common/nav_bg2.png) no-repeat center center/contain;
+
+                &::after {
+                    background: url(../images/common/icon_speechzBubble_go.png) no-repeat center center/contain;
+                }
+            }
+
+            .l-header__round {
+                margin-right: -6px;
+                max-width: 160.98px;
+                padding-right: 11px;
+            }
+        }
+    }
+
+    &__menuLink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transition: opacity 0.3s;
+        width: 100%;
+        position: relative;
+
+        &:hover {
+          @include g.hover {
+            opacity: .6;
+
+            &::after {
+              animation: bound 2s;
+            }
+          }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -10px;
+            right: 11px;
+            width: 31.08px;
+            height: 25.05px;
+            z-index: 2;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+
+        &.is-active {
+          &::after {
+            opacity: 1;
+            visibility: visible;
+            animation: bound 2s;
+          }
+        }
+    }
+
+    &__round {
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: 0.05em;
+        color: var(--black);
+        background-color: rgba(5, 250, 146, 0.56);
+        padding: 7px 0 6px;
+        width: 100%;
+        border-radius: 14px;
+        min-height: 25px;
+    }
+
+    &__iconBox {
+        display: none;
+    }
+
+    &__iconImg {
+        width: 100%;
+    }
+
+    &__drawerBox {
+        display: block;
+    }
+}
