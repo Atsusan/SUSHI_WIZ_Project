@@ -1,17 +1,209 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DEV ポン酢 SITE</title>
+  <title>SUSHI WIZ</title>
+  <!-- GoogleFonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Noto+Sans+JP:wght@400;500;600;700&family=Sawarabi+Gothic&display=swap"
+    rel="stylesheet">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/common.css">
+  <link rel="stylesheet" href="./assets/css/top.css">
 </head>
+
 <body>
-  テスト
 
-  <header></header>
-  <main></main>
+  <!-- ▼ PC FV -->
+  <div class="l-fv u-displayNone--PU">
+    文字スライダー左
+    <div class="l-fv__textBox">
+      <p class="l-fv__mainText">
+        今日、
+        <br>
+        あなたspanがいる場所が
+        <br>
+        <span class="l-fv__mainText--bigFz">鮨屋</span>になる。
+      </p>
+    </div>
+    画像スライダー右
+  </div>
+  <!-- ▲ PC FV-->
+
+  <!-- ▼ header -->
+  <div class="l-header">
+    <div class="l-header__inner">
+      <h1 class="l-header__logo">
+        <a href="/" class="l-header__logoLink">
+          <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="l-header__logoImg" width="69" height="64">
+        </a>
+      </h1>
+      <!-- ▼ drawer -->
+      <div class="l-header__hamburgerBtn" onclick="drawerToggle(event, 'drawerMenu')">
+        <div class="l-header__hamburgerBox">
+          <span class="l-header__bar"></span>
+          <span class="l-header__bar"></span>
+          <span class="l-header__bar"></span>
+        </div>
+      </div>
+      <!-- ▲ drawer -->
+    </div>
+
+    <!-- ▼ drawer contents -->
+    <!-- <div id="drawerMenu" class="c-drawerMenu">
+      <div class="c-drawerMenu__inner">
+        <div class="c-drawerMenu__wrap">
+          <nav class="c-drawerMenu__nav">
+            <ul class="c-drawerMenu__menu">
+              <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
+                <a href="#" class="c-drawerMenu__menuLink" onclick="drawerClose('drawerMenu')"><span
+                    class="c-drawerMenu__subText">お知らせ</span>News</a>
+              </li>
+              <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
+                <a href="#" class="c-drawerMenu__menuLink"><span class="c-drawerMenu__subText">コンセプト
+                  </span>Concept</a>
+              </li>
+              <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
+                <a href="#" class="c-drawerMenu__menuLink"><span class="c-drawerMenu__subText">メニュー</span>Menu
+                </a>
+              </li>
+              <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
+                <a href="#" class="c-drawerMenu__menuLink"><span class="c-drawerMenu__subText">パーティープラン
+                  </span>Party Plane
+                </a>
+              </li>
+              <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
+                <a href="#" class="c-drawerMenu__menuLink"><span class="c-drawerMenu__subText">お問い合わせ
+                  </span>Contact us
+                </a>
+              </li>
+              <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
+                <a href="#" class="c-drawerMenu__menuLink"><span class="c-drawerMenu__subText">会員制申し込みページ
+                  </span>Members</a>
+              </li>
+              <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
+                <a href="#" class="c-drawerMenu__menuLink"><span
+                    class="c-drawerMenu__subText">プライバシーポリシー</span>Privacy＆Policy</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div> -->
+    <!-- ▲ drawer contents -->
+
+  </div>
+  <!-- ▲ header -->
+
+  <!-- ▼ main -->
+  <main>
+    <!-- ▼ p-topFv -->
+    <section class="p-topFv u-displayNone--PO">
+      <!-- ▼ Slide Loop Text Start -->
+      <div class="p-topFv__textSwiperContainer">
+        <div id="js-swiperText" class="swiper p-topFv__textSwiper">
+          <ul class="swiper-wrapper p-topFv__textWrapper">
+            <li class="swiper-slide p-topFv__textSlide">東京湾岸出張寿司</li>
+            <li class="swiper-slide p-topFv__textSlide--en">SUSHI WIZ</li>
+            <li class="swiper-slide p-topFv__textSlide">東京湾岸出張寿司</li>
+            <li class="swiper-slide p-topFv__textSlide--en">SUSHI WIZ</li>
+            <li class="swiper-slide p-topFv__textSlide">東京湾岸出張寿司</li>
+            <li class="swiper-slide p-topFv__textSlide--en">SUSHI WIZ</li>
+            <li class="swiper-slide p-topFv__textSlide">東京湾岸出張寿司</li>
+            <li class="swiper-slide p-topFv__textSlide--en">SUSHI WIZ</li>
+            <li class="swiper-slide p-topFv__textSlide">東京湾岸出張寿司</li>
+            <li class="swiper-slide p-topFv__textSlide--en">SUSHI WIZ</li>
+            <li class="swiper-slide p-topFv__textSlide">東京湾岸出張寿司</li>
+            <li class="swiper-slide p-topFv__textSlide--en">SUSHI WIZ</li>
+            <li class="swiper-slide p-topFv__textSlide">東京湾岸出張寿司</li>
+            <li class="swiper-slide p-topFv__textSlide--en">SUSHI WIZ</li>
+            <li class="swiper-slide p-topFv__textSlide">東京湾岸出張寿司</li>
+            <li class="swiper-slide p-topFv__textSlide--en">SUSHI WIZ</li>
+            <li class="swiper-slide p-topFv__textSlide">東京湾岸出張寿司</li>
+            <li class="swiper-slide p-topFv__textSlide--en">SUSHI WIZ</li>
+            <li class="swiper-slide p-topFv__textSlide">東京湾岸出張寿司</li>
+            <li class="swiper-slide p-topFv__textSlide--en">SUSHI WIZ</li>
+          </ul>
+        </div>
+      </div>
+      <!-- ▲ Slide Loop Text Start -->
+
+      <div class="p-topFv__textContents">
+        <div class="p-topFv__inner">
+          <div class="p-topFv__textBox">
+            <p class="p-topFv__mainText">
+              今日、
+              <br>
+              あなた <span class="p-topFv__mainText--mlSmallLittleFz">が</span><span
+                class="p-topFv__mainText--smallFz">いる</span>場所<span class="p-topFv__mainText--littleSmallFz">が</span>
+              <br>
+              <span class="p-topFv__mainText--bigFz">鮨屋</span><span class="p-topFv__mainText--littleSmallFz">に</span>なる。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ▼ Slide Loop Images Start -->
+      <div class="p-topFv__imagesSwiperContainer">
+        <div id="js-swiperImages" class="swiper p-topFv__imagesSwiper">
+          <ul class="swiper-wrapper p-topFv__imagesWrapper">
+            <li class="swiper-slide p-topFv__imagesSlide">
+              <img src="./assets/images/fv-item1.jpg" alt="item-1" class="p-topFv__ImagesSlideItem" width="404" height="404">
+            </li>
+            <li class="swiper-slide p-topFv__imagesSlide">
+              <img src="./assets/images/fv-item2.jpg" alt="item-2" class="p-topFv__ImagesSlideItem" width="404" height="404">
+            </li>
+            <li class="swiper-slide p-topFv__imagesSlide">
+              <img src="./assets/images/fv-item3.jpg" alt="item-3" class="p-topFv__ImagesSlideItem" width="404" height="404">
+            </li>
+            <li class="swiper-slide p-topFv__imagesSlide">
+              <img src="./assets/images/fv-item4.jpg" alt="item-4" class="p-topFv__ImagesSlideItem" width="404" height="404">
+            </li>
+            <li class="swiper-slide p-topFv__imagesSlide">
+              <img src="./assets/images/fv-item5.jpg" alt="item-5" class="p-topFv__ImagesSlideItem" width="404" height="404">
+            </li>
+            <li class="swiper-slide p-topFv__imagesSlide">
+              <img src="./assets/images/fv-item6.jpg" alt="item-6" class="p-topFv__ImagesSlideItem" width="404" height="404">
+            </li>
+            <li class="swiper-slide p-topFv__imagesSlide">
+              <img src="./assets/images/fv-item7.jpg" alt="item-7" class="p-topFv__ImagesSlideItem" width="404" height="404">
+            </li>
+            <li class="swiper-slide p-topFv__imagesSlide">
+              <img src="./assets/images/fv-item8.jpg" alt="item-8" class="p-topFv__ImagesSlideItem" width="404" height="404">
+            </li>
+            <li class="swiper-slide p-topFv__imagesSlide">
+              <img src="./assets/images/fv-item9.jpg" alt="item-9" class="p-topFv__ImagesSlideItem" width="404" height="404">
+            </li>
+            <li class="swiper-slide p-topFv__imagesSlide">
+              <img src="./assets/images/fv-item10.jpg" alt="item-10" class="p-topFv__ImagesSlideItem" width="404" height="404">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ▲ Slide Loop Images Start -->
+
+
+    </section>
+    <!-- ▲ p-topFv -->
+
+
+  </main>
+  <!-- ▲ main -->
+  <!-- ▼ footer -->
   <footer></footer>
+  <!-- ▲ footer -->
 
+  <script src="./assets/js/drawer.js"></script>
+  <script src="./assets/js/swiper.js"></script>
 </body>
+
 </html>

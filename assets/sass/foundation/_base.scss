@@ -5,21 +5,16 @@
 :root {
   // カスタムプロパティをここに書いていただきたいです。
   // color
-  --white: #FFFFFF;
-  --black: #000000;
+  --white: #F9F9F9;
+  --black: #211E1E;
 
   // font-family
-  --en: "eurostile-extended", sans-serif;
-  --eth: "ethnocentric", sans-serif;
-  --din: "din-2014", sans-serif;//600 700
-  --arial: Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;//400
-  --ja: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック Medium", YuGothic, YuGothicM, メイリオ, Meiryo, sans-serif;
-  --hinamin: "Hina Mincho", serif;
-  --mincho : "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;//600
+  --en: "Montserrat", system-ui, sans-serif;
+  --ja: "Noto Sans JP", "Meiryo", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
 
 html {
-  font-size: 16px;
+  font-size: 62.5%;
 }
 
 body {
@@ -28,7 +23,8 @@ body {
   font-family: var(--ja);
   font-weight: 400;
   font-style: normal;
-  color: var(--black);
+  color: var(--white);
+  background-color: var(--black);
 
   &.is-fixed {
     overflow: hidden;
