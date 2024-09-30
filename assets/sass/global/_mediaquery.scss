@@ -22,9 +22,9 @@ $tabletL: 1024px;
     @content;
   }
 }
-$tabletM: 960px;
+$tabletM: 921px;
 @mixin tabletM {
-  @media (max-width: ($tabletM)) {
+  @media (min-width: ($tabletM)) {
     @content;
   }
 }
@@ -33,9 +33,9 @@ $tabletM: 960px;
     @content;
   }
 }
-$tabletS: 768px;
+$tabletS: 767px;
 @mixin tabletS {
-  @media (max-width: ($tabletS)) {
+  @media (min-width: ($tabletS)) {
     @content;
   }
 }

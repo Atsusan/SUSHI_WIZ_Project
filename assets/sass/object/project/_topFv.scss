@@ -5,10 +5,12 @@
 .p-topFv {
     margin-top: 8.7rem;
     background: url(../images/sp/fv.jpg) no-repeat center top/cover;
-    // min-height: calc(70rem + 8.7rem);
     height: calc(100vh - 8.7rem); // svhが効かない時の保険
     height: calc(100svh - 8.7rem);
     position: relative;
+    @include g.tabletM {
+        display: none;
+    }
 
     &::after {
         content: "";
@@ -20,6 +22,10 @@
         background: var(--black);
         opacity: 0.8;
         transform: skewX(12.5deg);
+    }
+
+    &__textSwiperBox {
+        //
     }
 
     &__textContents {
@@ -61,64 +67,35 @@
         }
     }
 
-    /* Start swiperText */
-    &__textSwiperContainer {
-        overflow: hidden;
-    }
-
-    &__textSwiper {
-        overflow: visible;
-        padding-top: 1.1rem;
-        padding-bottom: 1rem;
-        border-top: 1px solid var(--white);
-        border-bottom: 1px solid var(--white);
-    }
-
-    &__textWrapper {
-        transition-timing-function: linear;
-        align-items: center;
-    }
-
-    &__textSlide {
-        width: auto !important;
-        font-size: 1.6rem;
-        font-weight: 500;
-        line-height: 1;
-        color: var(--white);
-        margin-top: -.3rem;
-
-        &--en {
-            @extend .p-topFv__textSlide;
-            font-family: var(--en);
-            font-size: 2.2rem;
-            font-weight: 500;
-            margin-top: 0;
-        }
-    }
-    /* End swiperText */
-
-    /* Start swiperImages */
     &__imagesSwiperContainer {
         margin-top: 2.5rem;
-        overflow: hidden;
     }
+}
 
-    &__imagesSwiper {
-        overflow: visible;
-    }
+@media screen and (min-width: 767px) and (max-width: 920px) {
+    .p-topFv {
+        position: relative;
+        background: url(../images/fv-tablet.jpg) no-repeat center top/cover;
+        height: calc(100vh - 8.7rem - 6.6rem); // svhが効かない時の保険
+        height: calc(100svh - 8.7rem - 6.6rem);
+        &::before {
+            content: "";
+            display: block;
+            background-color: var(--black);
+            transform: translateY(-8.7rem);
+            width: 100%;
+            height: 8.7rem;
+        }
 
-    &__imagesWrapper {
-        transition-timing-function: linear;
-        align-items: center;
-    }
+        &::after {
+            content: "";
+            display: none;
+        }
 
-    &__imagesSlide {
-        width: auto !important;
-        max-width: 16rem;
+        &__textSwiperBox,
+        &__textContents,
+        &__imagesSwiperContainer {
+            display: none;
+        }
     }
-
-    &__imagesSlideImg {
-        width: 100%;
-    }
-    /* End swiperImages */
 }

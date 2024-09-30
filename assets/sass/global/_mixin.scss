@@ -27,7 +27,7 @@
 //pxからvhの値を取得する関数
 //PCサイズ用
 @function vh($px_value) {
-  @return calc($px_value) / 800 * 100vh;
+  @return calc($px_value) / 887 * 100vh;
 }
 
 //SPサイズ用

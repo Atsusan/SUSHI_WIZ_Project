@@ -4,22 +4,39 @@
 
 .l-header {
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 100;
     width: 100%;
+    @include g.tabletS {
+        position: fixed;
+        left: unset;
+        right: calc(31 / 1440 * 100%);
+        overflow: hidden;
+        height: 8.4rem;
+        max-width: 39rem;
+    }
 
     &__inner {
         padding-left: 2.4rem;
         padding-right: 2.4rem;
         display: flex;
         width: 100%;
+        @include g.tabletS {
+            padding-left: 2rem;
+            padding-right: 2.8rem;
+        }
     }
 
     &__logo {
         padding-top: 1rem;
+        width: 100%;
     }
+
     &__logoLink {
         display: block;
         max-width: 6.9rem;
+        width: 100%;
     }
 
     &__logoImg {
@@ -95,5 +112,18 @@
           &:last-of-type {
             top: calc(50% + 1.3rem);
           }
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 920px) {
+    .l-header {
+        right: calc(44 / 920 * 100vw);
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .l-header {
+        left: unset;
+        right: unset;
     }
 }
