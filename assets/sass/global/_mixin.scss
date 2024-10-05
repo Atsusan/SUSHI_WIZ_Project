@@ -32,5 +32,5 @@
 
 //SPサイズ用
 @function vh_sp($px_value) {
-  @return calc($px_value) / 737 * 100vh;
+  @return calc($px_value) / 754 * 100vh;
 }

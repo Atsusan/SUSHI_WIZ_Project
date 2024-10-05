@@ -4,12 +4,20 @@
 @use "./object/components/loopText";
 @use "./object/components/loopImages";
 @use "./object/components/scrollDown";
+@use "./object/components/accordion";
 // ==========================================================================
 // project
 // ==========================================================================
 @use "./object/project/_about";
 @use "./object/project/_topFv";
 @use "./object/project/_topFvContents";
+@use "./object/project/_topConcept";
+@use "./object/project/_topProfile";
+@use "./object/project/_topPlan";
+@use "./object/project/_topInsta";
+@use "./object/project/_topFaq";
+@use "./object/project/_topFlow";
+@use "./object/project/_topNews";
 
 // ==========================================================================
 // utility

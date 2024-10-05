@@ -30,3 +30,27 @@ const swiperImages = new Swiper('.js-swiperImages', {
         disableOnInteraction: false,
     },
 });
+
+// top slide News
+const swiperNews = new Swiper('.js-swiperNews', {
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: true,
+    spaceBetween: -25,
+    speed: 1000,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+      // ページネーション
+    pagination: {
+        el: ".js-swiperNews__pagination",
+        clickable: true,
+        type: "fraction",
+    },
+    // 前後の矢印
+    navigation: {
+        nextEl: ".js-swiperNews__next",
+        prevEl: ".js-swiperNews__prev",
+    },
+});

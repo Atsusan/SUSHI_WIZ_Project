@@ -3,16 +3,25 @@
 @use "../../global" as g;
 
 .p-topFvContents {
+    padding-top: .5rem;
+    display: flex;
+    flex-direction: column;
     background: url(../images/top-fv-bg.jpg) no-repeat center top/cover;
-    height: max(100vh, 88.7rem);
+    @include g.tabletM {
+        display: block;
+        min-height: max(100vh, 88.7rem);
+    }
 
     &__inner {
         padding: 0 3.5rem;
+        order: 2;
     }
 
     &__textBox {
-        padding-top: 170px;
-        padding-top: max(g.vh(170), 12rem);
+        padding-top: 10.2rem;
+        @include g.tabletM {
+            padding-top: max(g.vh(170), 12rem);
+        }
     }
 
     &__mainText {
@@ -23,9 +32,10 @@
     }
 
     &__imgBox {
-        margin-top: g.vh(40);
-        max-width: 30.3rem;
+        margin-top: g.vh_sp(38);
+        max-width: 28.8rem;
         margin-left: auto;
+        order: 3;
     }
 
     &__img {
@@ -33,6 +43,16 @@
     }
 
     &__scrollBox {
-        margin-top: 20px;
+        margin-top: 2rem;
+        order: 1;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 920px) {
+    .p-topFvContents {
+
+        &__textBox {
+            padding-top: 11.7rem;
+        }
     }
 }

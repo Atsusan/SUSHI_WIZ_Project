@@ -1,0 +1,100 @@
+/* c-accordion
+-----------------------------------------------
+------------------ */
+@use "../../global" as g;
+
+.c-accordion {
+
+    &__item {
+        border-bottom: 1px solid var(--white);
+
+        &:first-child {
+            border-top: 1px solid var(--white);
+        }
+    }
+
+    &__titleBox {
+        cursor: pointer;
+        position: relative;
+    }
+
+    &__title,
+    &__content {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 3.3rem;
+            height: 3.3rem;
+            transition: all 0.4s;
+        }
+    }
+
+    &__title {
+        padding: 2rem 0 2rem 4.9rem;
+        max-width: 28.6rem;
+        font-size: 1.4rem;
+        font-weight: bold;
+        line-height: calc(24 / 14);
+        color: var(--white);
+        
+        &::before {
+            top: 50%;
+            transform: translateY(-50%);
+            background: url(../images/common/icon-question.svg) no-repeat center/contain;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%) rotate(180deg);
+        display: block;
+        width: 2.4rem;
+        height: 2.4rem;
+        background: url(../images/common/icon-arrow.svg) no-repeat center/contain;
+        transition: transform 0.2s;
+
+        &.is-open {
+            transform: translateY(-50%) rotate(0);
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.4s, visibility 0.4s, padding 0.4s, border-top 0.1s ease-in-out;
+        width: 100%;
+        padding-left: 4.9rem;
+        // transition: all 0.4s;
+
+        &::before {
+            max-height: calc(100% - 4rem);
+            margin-top: 2rem;
+        }
+
+        &.is-open {
+            grid-template-rows: 1fr;
+            visibility: visible;
+            padding: 2rem 0 2rem 4.9rem;
+            border-top: 1px solid var(--white);
+
+            &::before {
+                background: url(../images/common/icon-answer.svg) no-repeat center/contain;
+            }
+        }
+    }
+
+    &__body {
+        overflow: hidden;
+    }
+    &__bodyText {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: calc(24 / 14);
+        color: var(--white);
+    }
+}

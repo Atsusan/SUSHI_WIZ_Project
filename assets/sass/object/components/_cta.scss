@@ -1,0 +1,115 @@
+/* c-cta
+-----------------------------------------------
+------------------ */
+@use "../../global" as g;
+
+.c-cta {
+    background: url(../images/common/cta-bg.jpg) no-repeat center center/cover;
+    padding: 6rem 0 4rem;
+
+    &__inner {
+        padding: 0 2.5rem;
+    }
+
+    &__textBox {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 3.2rem;
+        font-family: var(--en);
+        font-weight: 500;
+        line-height: 150%;
+        color: var(--white);
+    }
+
+    &__read {
+        margin-top: 2rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.7;
+        color: var(--white);
+        text-align: center;
+    }
+
+    &__btnWarap {
+        margin-top: 3rem;
+    }
+
+    &__btnContact {
+        //
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 34rem;
+        padding: 1.6rem 0;
+        font-size: 2.4rem;
+        font-weight: 600;
+        font-family: var(--en);
+        line-height: 1;
+        background: var(--white);
+        color: var(--black);
+        transtion: opacity 0.3s;
+
+        &--bgImage {
+            @extend .c-cta__link;
+            background: url(../images/common/cta-btn.jpg) no-repeat center center / cover;
+            color: var(--white);
+        }
+
+        &:hover {
+            @include g.hover {
+                opacity: 0.65;
+            }
+        }
+    }
+
+    &__subText {
+        font-size: 0.583333em;
+        font-weight: 500;
+    }
+
+    &__mainText {
+        //
+    }
+
+    &__btnResevation {
+        margin-top: 2rem;
+    }
+
+    &__snsBox {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__line {
+        max-width: 5.9rem;
+        width: 100%;
+    }
+
+    &__lineImg {
+        width: 100%;
+    }
+
+    &__snsText {
+        margin-top: 0.8rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1;
+        color: var(--white);
+        
+        &--en {
+            @extend .c-cta__snsText;
+            font-family: var(--en);
+            font-size: 1.7rem;
+            font-weight: bold;
+        }
+    }
+}

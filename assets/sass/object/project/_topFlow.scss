@@ -1,0 +1,135 @@
+/* p-topFlow
+----------------------------------------------------------------- */
+@use "../../global" as g;
+
+.p-topFlow {
+    padding: 6rem 0;
+    background: url(../images/top-flow-bg.jpg) no-repeat center top / cover;
+
+    &__inner {
+        padding: 0 1.5rem;
+    }
+
+    &__titleBox {
+        //
+    }
+
+    &__list {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        display: flex;
+        gap: 1.3rem;
+        background-color: var(--white);
+        padding: 2rem .8rem 2rem 1.6rem;
+        position: relative;
+
+        /* 矢印 */
+        & + & {
+            margin-top: 2.5rem;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -14.5%;
+                left: 50%;
+                transform: translateX(-50%);
+                background: url(../images/common/icon-arrow-down.svg) no-repeat center center / contain;
+            }
+        }
+
+        /* 画像 */
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            max-width: 10rem;
+            height: 100%;
+            max-height: 10rem;
+        }
+
+        &:first-child::after {
+            background: url(../images/top-flow-item1.svg) no-repeat center center / contain;
+            bottom: 0;
+            right: 0;
+            width: 9.508rem;
+            height: 7.152rem;
+        }
+
+        &:nth-child(2)::after {
+            background: url(../images/top-flow-item2.svg) no-repeat center center / contain;
+            bottom: 0;
+            right: 0;
+            width: 6.23rem;
+            height: 8.279rem;
+        }
+
+        &:nth-child(3)::after {
+            background: url(../images/top-flow-item3.svg) no-repeat center center / contain;
+            bottom: 0;
+            right: 0;
+            width: 8.889rem;
+            height: 8.333rem;
+        }
+
+        &:nth-child(4)::after {
+            background: url(../images/top-flow-item4.svg) no-repeat center center / contain;
+            bottom: 0;
+            right: 0;
+            width: 8.4rem;
+            height: 5.115rem;
+        }
+    }
+
+    &__numberBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--black);
+        border-radius: 50%;
+        min-height: 8rem;
+        min-width: 8rem;
+    }
+
+    &__en {
+        font-size: 1.5rem;
+        font-weight: 600;
+        font-family: var(--en);
+        line-height: 1;
+        color: var(--white);
+    }
+
+    &__number {
+        margin-top: 0.3rem;
+        font-size: 2.4rem;
+        font-weight: 600;
+        font-family: var(--en);
+        color: var(--en);
+    }
+
+    &__textBox {
+        //
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 150%;
+        color: var(--black);
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: cal(24 / 14);
+        color: var(--black);
+        max-width: 22.3rem;
+    }
+}

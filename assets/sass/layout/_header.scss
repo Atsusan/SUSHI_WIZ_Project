@@ -48,12 +48,13 @@
         width: 7rem;
         height: 7rem;
         position: relative;
+        margin-right: 0.5rem;
 
         &::before {
             content: "";
             position: absolute;
             top: calc(50% - 2.3rem);
-            left: calc(50% + .5rem);
+            left: calc(50% + .4rem);
             transform: translate(-50%, -50%);
             width: 13.8rem;
             height: 13.8rem;
@@ -98,20 +99,18 @@
         transition: .3s;
         border-radius: .1rem;
 
-
         &:first-of-type {
             top: calc(50% - 1.3rem);
-            
-          }
-  
-          &:nth-of-type(2) {
-            max-width: 60%;
-            transform: translate(calc(-50% - 4px), -50%);
-          }
-  
-          &:last-of-type {
+        }
+
+        &:nth-of-type(2) {
+            max-width: 68%;
+            transform: translate(calc(-50% - .5rem), -50%);
+        }
+
+        &:last-of-type {
             top: calc(50% + 1.3rem);
-          }
+        }
     }
 }
 
