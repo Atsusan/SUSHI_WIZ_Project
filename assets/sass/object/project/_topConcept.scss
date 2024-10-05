@@ -3,6 +3,7 @@
 @use "../../global" as g;
 
 .p-topConcept {
+    padding-top: 6rem;
     padding-bottom: 6rem;
 
     &__inner {
@@ -17,7 +18,7 @@
         position: absolute;
         top: 10.7rem;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-49%);
         width: 100%;
         display: flex;
         justify-content: center;
@@ -44,7 +45,7 @@
         margin-top: 2rem;
         font-size: 1.4rem;
         font-weight: 400;
-        line-height: calc(28 / 20);
+        line-height: calc(28 / 14);
         color: var(--white);
     }
 
