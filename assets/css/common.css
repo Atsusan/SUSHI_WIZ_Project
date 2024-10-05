@@ -726,7 +726,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.3rem;
 }
 .l-footer__link {
   display: block;
@@ -753,7 +753,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 8.7rem;
+  margin-top: 9rem;
 }
 .l-footer__text {
   font-size: 1.2rem;
@@ -762,14 +762,18 @@ a {
   color: var(--white);
 }
 .l-footer__copyRightBox {
-  margin-top: 1.2rem;
+  margin-top: 1.7rem;
   font-size: 1.2rem;
   font-weight: 400;
   font-family: var(--en);
   line-height: 1;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
   color: var(--white);
 }
+.l-footer__copyRight {
+  font-size: inherit;
+}
+
 /* c-drawerMenu
 -----------------------------------------------
 ------------------ */

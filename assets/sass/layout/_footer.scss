@@ -13,7 +13,7 @@
     &__list {
         display: flex;
         flex-direction: column;
-        gap: 1.2rem;
+        gap: 1.3rem;
     }
 
     &__item {
@@ -39,7 +39,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 8.7rem;
+        margin-top: 9rem;
     }
 
     &__text {
@@ -50,16 +50,16 @@
     }
 
     &__copyRightBox {
-        margin-top: 1.2rem;
+        margin-top: 1.7rem;
         font-size: 1.2rem;
         font-weight: 400;
         font-family: var(--en);
         line-height: 1;
-        letter-spacing: 5%;
+        letter-spacing: 0.05em;
         color: var(--white);
     }
 
     &__copyRight {
-        //
+        font-size: inherit;
     }
 }
