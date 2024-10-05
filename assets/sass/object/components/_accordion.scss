@@ -33,16 +33,17 @@
     }
 
     &__title {
-        padding: 2rem 0 2rem 4.9rem;
-        max-width: 28.6rem;
+        padding: 2.6rem 0 2rem 5.2rem;
+        max-width: 30rem;
         font-size: 1.4rem;
         font-weight: bold;
         line-height: calc(24 / 14);
         color: var(--white);
         
         &::before {
-            top: 50%;
-            transform: translateY(-50%);
+            max-width: 2.7rem;
+            top: 1.4em;
+            left: 1rem;
             background: url(../images/common/icon-question.svg) no-repeat center/contain;
         }
     }
@@ -50,16 +51,16 @@
     &__icon {
         position: absolute;
         top: 50%;
-        right: 0;
-        transform: translateY(-50%) rotate(180deg);
+        right: 1.5rem;
+        transform: translateY(calc(-50% + 0.17em));
         display: block;
-        width: 2.4rem;
-        height: 2.4rem;
+        width: 1.4rem;
+        height: .8rem;
         background: url(../images/common/icon-arrow.svg) no-repeat center/contain;
         transition: transform 0.2s;
 
         &.is-open {
-            transform: translateY(-50%) rotate(0);
+            transform: translateY(-50%) rotate(180deg);
         }
     }
 
@@ -69,11 +70,12 @@
         transition: grid-template-rows 0.4s, visibility 0.4s, padding 0.4s, border-top 0.1s ease-in-out;
         width: 100%;
         padding-left: 4.9rem;
-        // transition: all 0.4s;
 
         &::before {
             max-height: calc(100% - 4rem);
             margin-top: 2rem;
+            top: -0.3rem;
+            left: 0.8rem;
         }
 
         &.is-open {
