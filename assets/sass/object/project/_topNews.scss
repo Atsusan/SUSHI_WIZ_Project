@@ -65,11 +65,11 @@
         display: inline-block;
         font-size: 1.4rem;
         font-weight: 500;
-        font-family: var(-en);
+        font-family: var(--en);
         line-height: calc(24 / 14);
         color: var(--white);
         background: var(--black);
-        padding: .1rem .9rem;
+        padding: .1rem .8rem 0;
         flex-shrink: 0;
     }
 
@@ -83,20 +83,23 @@
 
     &__date {
         margin-right: 1em;
+        flex-shrink: 0;
     }
 
     &__title {
-        //
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     &__swiperController {
         position: relative;
         display: flex;
         justify-content: center;
-        gap: 1.6rem;
-        margin-top: 4rem;
+        gap: 1.4rem;
+        margin-top: 2.2rem;
         height: 100%;
-        min-height: 2.8rem;
+        // min-height: 2.8rem;
     }
 
     &__swiperPaginationBox { /* 数字によって左右が動いてしまうのを阻止 */
@@ -122,13 +125,17 @@
 
     &__swiperPrev,
     &__swiperNext {
-        width: 2.8rem;
-        height: 2.8rem;
+        width: 2.9rem;
+        // height: 2.8rem;
         position: relative;
+        top: 0;
         left: unset;
         right: unset;
-        margin-top: 0;
+        margin-top: -.3rem;
         transition: opacity .4s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &:hover {
             @include g.hover {
@@ -155,7 +162,7 @@
     }
 
     &__btnBox {
-        margin-top: 2rem;
+        margin-top: 1.2rem;
     }
 
     /* swiper 独自クラスへのCSS */

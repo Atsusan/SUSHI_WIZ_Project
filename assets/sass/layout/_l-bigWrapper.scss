@@ -7,15 +7,21 @@
     @include g.tabletS {
         max-width: 39rem;
         margin-left: auto;
-        margin-right: calc(31 / 1440 * 100%);
+        // margin-right: calc(31 / 1440 * 100%);
         z-index: 10;
         background-color: var(--black);
     }
 }
 
 
-@media screen and (min-width: 767px) and (max-width: 920px) {
+@media screen and (min-width: 768px) and (max-width: 920px) {
     .l-bigWrapper {
         margin-right: calc(44 / 920 * 100vw);
+    }
+}
+
+@media screen and (min-width: 921px) {
+    .l-bigWrapper {
+        margin-right: calc(31 / 1440 * 100%);
     }
 }
