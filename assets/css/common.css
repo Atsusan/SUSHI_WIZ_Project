@@ -1051,7 +1051,7 @@ a {
 }
 .c-btn--black .c-btn__link {
   color: var(--white);
-  border: 2px solid var(--white);
+  border: 2px solid var(--black);
   background: var(--black);
 }
 .c-btn--img .c-btn__link {
