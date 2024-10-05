@@ -7,6 +7,18 @@
     display: flex;
     justify-content: center;
 
+    &--jp {
+        @extend .c-secondHeading;
+
+        .c-secondHeading__title {
+            font-size: 2.4rem;
+            font-weight: 500;
+            font-family: 500;
+            line-height: 150%;
+            // color: var(--white);
+        }
+    }
+
     &__title {
         font-size: 3.2rem;
         font-weight: 500;

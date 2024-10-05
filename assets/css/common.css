@@ -1109,13 +1109,19 @@ a {
 /* c-secondHeading
 -----------------------------------------------
 ------------------ */
-.c-secondHeading {
+.c-secondHeading, .c-secondHeading--jp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.c-secondHeading--jp .c-secondHeading__title, .c-secondHeading--jp .c-secondHeading__title--white {
+  font-size: 2.4rem;
+  font-weight: 500;
+  font-family: 500;
+  line-height: 150%;
 }
 .c-secondHeading__title, .c-secondHeading__title--white {
   font-size: 3.2rem;

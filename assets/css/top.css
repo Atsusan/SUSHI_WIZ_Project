@@ -654,7 +654,7 @@
 /* p-topFlow
 ----------------------------------------------------------------- */
 .p-topFlow {
-  padding: 6rem 0;
+  padding: 6.6rem 0 6rem;
   background: url(../images/top-flow-bg.jpg) no-repeat center top/cover;
 }
 .p-topFlow__inner {
@@ -674,10 +674,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.3rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   background-color: var(--white);
-  padding: 2rem 0.8rem 2rem 1.6rem;
+  padding: 2.8rem 2rem 2.8rem;
   position: relative;
+  z-index: 1;
   /* 矢印 */
   /* 画像 */
 }
@@ -688,8 +691,10 @@
 .p-topFlow__item + .p-topFlow__item::before {
   content: "";
   position: absolute;
-  top: -14.5%;
+  top: -13.2%;
   left: 50%;
+  width: 2.4rem;
+  height: 1.3rem;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background: url(../images/common/icon-arrow-down.svg) no-repeat center center/contain;
@@ -703,34 +708,39 @@
   max-width: 10rem;
   height: 100%;
   max-height: 10rem;
+  z-index: -1;
 }
 .p-topFlow__item:first-child::after {
   background: url(../images/top-flow-item1.svg) no-repeat center center/contain;
-  bottom: 0;
-  right: 0;
+  bottom: 1.4rem;
+  right: 0.7rem;
   width: 9.508rem;
   height: 7.152rem;
 }
 .p-topFlow__item:nth-child(2)::after {
   background: url(../images/top-flow-item2.svg) no-repeat center center/contain;
-  bottom: 0;
-  right: 0;
-  width: 6.23rem;
-  height: 8.279rem;
+  bottom: 1.2rem;
+  right: 2.6rem;
+  width: 6.4rem;
+  height: 8.3rem;
 }
 .p-topFlow__item:nth-child(3)::after {
   background: url(../images/top-flow-item3.svg) no-repeat center center/contain;
-  bottom: 0;
-  right: 0;
+  bottom: 1.1rem;
+  right: 1.2rem;
   width: 8.889rem;
   height: 8.333rem;
 }
+.p-topFlow__item:nth-child(4) {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 .p-topFlow__item:nth-child(4)::after {
   background: url(../images/top-flow-item4.svg) no-repeat center center/contain;
-  bottom: 0;
-  right: 0;
-  width: 8.4rem;
-  height: 5.115rem;
+  bottom: 1.2rem;
+  right: 1.3rem;
+  width: 8.8rem;
+  height: 5.6rem;
 }
 .p-topFlow__numberBox {
   display: -webkit-box;
@@ -750,8 +760,14 @@
   border-radius: 50%;
   min-height: 8rem;
   min-width: 8rem;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 1.6rem;
 }
 .p-topFlow__en {
+  margin-top: 1rem;
   font-size: 1.5rem;
   font-weight: 600;
   font-family: var(--en);
@@ -772,9 +788,10 @@
   color: var(--black);
 }
 .p-topFlow__text {
+  margin-top: 0.3rem;
   font-size: 1.4rem;
   font-weight: 400;
-  line-height: cal(24/14);
+  line-height: 1.7142857143;
   color: var(--black);
   max-width: 22.3rem;
 }

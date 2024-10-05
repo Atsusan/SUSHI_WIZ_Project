@@ -3,7 +3,7 @@
 @use "../../global" as g;
 
 .p-topFlow {
-    padding: 6rem 0;
+    padding: 6.6rem 0 6rem;
     background: url(../images/top-flow-bg.jpg) no-repeat center top / cover;
 
     &__inner {
@@ -22,10 +22,11 @@
 
     &__item {
         display: flex;
-        gap: 1.3rem;
+        justify-content: flex-end;
         background-color: var(--white);
-        padding: 2rem .8rem 2rem 1.6rem;
+        padding: 2.8rem 2rem 2.8rem;
         position: relative;
+        z-index: 1;
 
         /* 矢印 */
         & + & {
@@ -35,8 +36,10 @@
             &::before {
                 content: "";
                 position: absolute;
-                top: -14.5%;
+                top: -13.2%;
                 left: 50%;
+                width: 2.4rem;
+                height: 1.3rem;
                 transform: translateX(-50%);
                 background: url(../images/common/icon-arrow-down.svg) no-repeat center center / contain;
             }
@@ -52,38 +55,44 @@
             max-width: 10rem;
             height: 100%;
             max-height: 10rem;
+            z-index: -1;
         }
 
         &:first-child::after {
             background: url(../images/top-flow-item1.svg) no-repeat center center / contain;
-            bottom: 0;
-            right: 0;
+            bottom: 1.4rem;
+            right: .7rem;
             width: 9.508rem;
             height: 7.152rem;
         }
 
         &:nth-child(2)::after {
             background: url(../images/top-flow-item2.svg) no-repeat center center / contain;
-            bottom: 0;
-            right: 0;
-            width: 6.23rem;
-            height: 8.279rem;
+            bottom: 1.2rem;
+            right: 2.6rem;
+            width: 6.4rem;
+            height: 8.3rem;
         }
 
         &:nth-child(3)::after {
             background: url(../images/top-flow-item3.svg) no-repeat center center / contain;
-            bottom: 0;
-            right: 0;
+            bottom: 1.1rem;
+            right: 1.2rem;
             width: 8.889rem;
             height: 8.333rem;
         }
 
-        &:nth-child(4)::after {
-            background: url(../images/top-flow-item4.svg) no-repeat center center / contain;
-            bottom: 0;
-            right: 0;
-            width: 8.4rem;
-            height: 5.115rem;
+        &:nth-child(4) {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+
+            &::after {
+                background: url(../images/top-flow-item4.svg) no-repeat center center / contain;
+                bottom: 1.2rem;
+                right: 1.3rem;
+                width: 8.8rem;
+                height: 5.6rem;
+            }
         }
     }
 
@@ -96,9 +105,14 @@
         border-radius: 50%;
         min-height: 8rem;
         min-width: 8rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 1.6rem;
     }
 
     &__en {
+        margin-top: 1rem;
         font-size: 1.5rem;
         font-weight: 600;
         font-family: var(--en);
@@ -126,9 +140,10 @@
     }
 
     &__text {
+        margin-top: 0.3rem;
         font-size: 1.4rem;
         font-weight: 400;
-        line-height: cal(24 / 14);
+        line-height: calc(24 / 14);
         color: var(--black);
         max-width: 22.3rem;
     }
