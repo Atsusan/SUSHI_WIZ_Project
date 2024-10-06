@@ -26,6 +26,48 @@
         }
     }
 
+    /* profile FV */
+    &--profile {
+        @extend .l-fv;
+
+        @include g.tabletS {
+            background: url(../images/profile-fv-bg.jpg) no-repeat center top/cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+        }
+    }
+
+    /* plan FV */
+    &--plan {
+        @extend .l-fv;
+
+        @include g.tabletS {
+            background: url(../images/plan-fv-bg.jpg) no-repeat center top/cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+        }
+    }
+
+    /* contact FV */
+    &--contact {
+        @extend .l-fv;
+
+        @include g.tabletS {
+            background: url(../images/contact-fv-bg.jpg) no-repeat center top/cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+        }
+    }
+
     &::after {
         @include g.tabletS {
             content: "";

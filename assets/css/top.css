@@ -119,39 +119,6 @@
           animation: scrollDown 3s infinite forwards cubic-bezier(0.25, 0.7, 0.5, 1);
 }
 
-@-webkit-keyframes scrollDown {
-  0% {
-    top: 0;
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    top: 100%;
-    opacity: 0;
-  }
-}
-
-@keyframes scrollDown {
-  0% {
-    top: 0;
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    top: 100%;
-    opacity: 0;
-  }
-}
 /* c-accordion
 -----------------------------------------------
 ------------------ */
@@ -247,8 +214,6 @@
   color: var(--white);
 }
 
-/* p-about
------------------------------------------------------------------ */
 /* p-topFv
 ----------------------------------------------------------------- */
 .p-topFv {
