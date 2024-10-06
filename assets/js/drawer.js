@@ -12,3 +12,13 @@ const drawerClose = (menu) => {
   document.getElementById(menu).classList.remove('is-open');
   document.getElementsByTagName('body')[0].classList.remove('is-open');
 }
+
+// ハンバーガーアイコンにイベントリスナーを追加
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  if (hamburgerIcon) {
+    hamburgerIcon.addEventListener('click', (e) => {
+      drawerToggle(e, 'drawer-menu');
+    });
+  }
+});

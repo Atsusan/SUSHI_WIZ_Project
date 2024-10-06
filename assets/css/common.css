@@ -435,6 +435,26 @@ a {
 }
 /* keyframes css
 ----------------------------------------------------------------- */
+@-webkit-keyframes loopTextAnimation {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+@keyframes loopTextAnimation {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
 /* l-contents
 ----------------------------------------------------------------- */
 @media (min-width: 767px) {
@@ -527,6 +547,19 @@ a {
   height: 13.8rem;
   border-radius: 50%;
   border: 1px solid var(--white);
+}
+.l-header__hamburgerBtn.is-open .l-header__bar:first-of-type {
+  top: 50%;
+  -webkit-transform: translate(-50%, 25%) rotate(-405deg);
+          transform: translate(-50%, 25%) rotate(-405deg);
+}
+.l-header__hamburgerBtn.is-open .l-header__bar:nth-of-type(2) {
+  opacity: 0;
+}
+.l-header__hamburgerBtn.is-open .l-header__bar:last-of-type {
+  bottom: 50%;
+  -webkit-transform: translate(-50%, -25%) rotate(45deg);
+          transform: translate(-50%, -25%) rotate(45deg);
 }
 .l-header__hamburgerBox {
   width: 100%;
@@ -778,30 +811,24 @@ a {
 -----------------------------------------------
 ------------------ */
 .c-drawerMenu {
-  display: none;
-}
-@media (min-width: 767px) {
-  .c-drawerMenu {
-    display: none;
-    display: block;
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    max-height: 39.5rem;
-    background: transparent;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: opacity 1.2s 0.5s ease, visibility 1.2s 0.5s ease;
-    transition: opacity 1.2s 0.5s ease, visibility 1.2s 0.5s ease;
-  }
+  display: block;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 39.5rem;
+  background: transparent;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 1.2s 0.5s ease, visibility 1.2s 0.5s ease;
+  transition: opacity 1.2s 0.5s ease, visibility 1.2s 0.5s ease;
 }
 .c-drawerMenu.is-open {
-  opacity: 1;
+  opacity: 0;
   visibility: visible;
   -webkit-transition: opacity 0.6s 0.2s ease, visibility 0.6s 0.2s ease;
   transition: opacity 0.6s 0.2s ease, visibility 0.6s 0.2s ease;
