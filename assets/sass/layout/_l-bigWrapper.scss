@@ -10,18 +10,19 @@
         // margin-right: calc(31 / 1440 * 100%);
         z-index: 10;
         background-color: var(--black);
+        margin-right: calc(31 / 1440 * 100%);
     }
 }
 
 
 @media screen and (min-width: 768px) and (max-width: 920px) {
-    .l-bigWrapper {
+    .top .l-bigWrapper {
         margin-right: calc(44 / 920 * 100vw);
     }
 }
 
 @media screen and (min-width: 921px) {
-    .l-bigWrapper {
+    .top .l-bigWrapper {
         margin-right: calc(31 / 1440 * 100%);
     }
 }

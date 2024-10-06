@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -455,6 +456,38 @@ a {
             transform: translateX(0%);
   }
 }
+@-webkit-keyframes scrollDown {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+@keyframes scrollDown {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
 /* l-contents
 ----------------------------------------------------------------- */
 @media (min-width: 767px) {
@@ -531,10 +564,13 @@ a {
 }
 .l-header__hamburgerBtn {
   margin-left: auto;
-  width: 7rem;
+  max-width: 7rem;
+  width: 100%;
   height: 7rem;
   position: relative;
-  margin-right: 0.5rem;
+  /* ボタン位置 設定 */
+  /* 背景の円 設定 */
+  /* bar 設定 */
 }
 .l-header__hamburgerBtn::before {
   content: "";
@@ -548,18 +584,35 @@ a {
   border-radius: 50%;
   border: 1px solid var(--white);
 }
-.l-header__hamburgerBtn.is-open .l-header__bar:first-of-type {
+.l-header__hamburgerBtn.is-open {
+  margin-right: -1.5rem;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.l-header__hamburgerBtn.is-open::before {
+  max-width: 5rem;
+  max-height: 5rem;
+  background-color: var(--white);
   top: 50%;
-  -webkit-transform: translate(-50%, 25%) rotate(-405deg);
-          transform: translate(-50%, 25%) rotate(-405deg);
+  left: 50%;
+}
+.l-header__hamburgerBtn.is-open .l-header__bar:first-of-type {
+  top: 51%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+  max-width: 45.64%;
+  background-color: var(--black);
 }
 .l-header__hamburgerBtn.is-open .l-header__bar:nth-of-type(2) {
   opacity: 0;
 }
 .l-header__hamburgerBtn.is-open .l-header__bar:last-of-type {
-  bottom: 50%;
-  -webkit-transform: translate(-50%, -25%) rotate(45deg);
-          transform: translate(-50%, -25%) rotate(45deg);
+  top: unset;
+  bottom: 46%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  max-width: 45.64%;
+  background-color: var(--black);
 }
 .l-header__hamburgerBox {
   width: 100%;
@@ -567,7 +620,9 @@ a {
   position: relative;
 }
 .l-header__bar {
+  display: block;
   position: absolute;
+  z-index: 200;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -583,16 +638,16 @@ a {
   top: calc(50% - 1.3rem);
 }
 .l-header__bar:nth-of-type(2) {
-  max-width: 68%;
-  -webkit-transform: translate(calc(-50% - 0.5rem), -50%);
-          transform: translate(calc(-50% - 0.5rem), -50%);
+  max-width: 61%;
+  -webkit-transform: translate(calc(-50% - 0.35rem), -50%);
+          transform: translate(calc(-50% - 0.35rem), -50%);
 }
 .l-header__bar:last-of-type {
   top: calc(50% + 1.3rem);
 }
 
 @media screen and (min-width: 767px) and (max-width: 920px) {
-  .l-header {
+  .top .l-header {
     right: 4.7826086957vw;
   }
 }
@@ -604,8 +659,11 @@ a {
 }
 /* l-header
 ----------------------------------------------------------------- */
+.l-fv, .l-fv--concept {
+  /* concept FV */
+}
 @media (min-width: 921px) {
-  .l-fv {
+  .l-fv, .l-fv--concept {
     position: fixed;
     top: 0;
     left: 0;
@@ -615,7 +673,17 @@ a {
   }
 }
 @media (min-width: 767px) {
-  .l-fv::after {
+  .l-fv--concept {
+    background: url(../images/concept-fv-bg.jpg) no-repeat center top/cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+  }
+}
+@media (min-width: 767px) {
+  .l-fv::after, .l-fv--concept::after {
     content: "";
     position: absolute;
     top: 0;
@@ -634,9 +702,17 @@ a {
     margin-top: 7.5535512965vh;
   }
 }
+.top .l-fv__textBox { /* TOPページのみ */ }
+@media (min-width: 767px) {
+  .top .l-fv__textBox {
+    margin-top: 24.5772266065vh;
+    margin-left: 8.1944444444vw;
+  }
+}
+.l-fv__textBox { /* 下層ページ共通 */ }
 @media (min-width: 767px) {
   .l-fv__textBox {
-    margin-top: 24.5772266065vh;
+    margin-top: 45.0958286359vh;
     margin-left: 8.1944444444vw;
   }
 }
@@ -662,6 +738,13 @@ a {
 .l-fv__mainText--bigFz {
   font-size: 1.1667em;
 }
+.l-fv__enTitle { /* TOPページ以外の見出し 設定共通 */
+  font-size: 5.6rem;
+  font-weight: 500;
+  font-family: var(--en);
+  line-height: 150%;
+  color: var(--white);
+}
 @media (min-width: 767px) {
   .l-fv__loopImagesContainer {
     margin-top: 14.2051860203vh;
@@ -669,7 +752,7 @@ a {
 }
 
 @media (min-width: 767px) and (max-width: 920px) {
-  .l-fv {
+  .top .l-fv, .top .l-fv--concept {
     position: fixed;
     top: 0;
     left: 0;
@@ -677,41 +760,41 @@ a {
     height: 100vh;
     width: 100%;
   }
-  .l-fv__loopTextContainer {
+  .top .l-fv__loopTextContainer {
     margin-top: 8.7rem;
   }
-  .l-fv__textBox {
+  .top .l-fv__textBox {
     margin-top: 17.0822942643svh;
     margin-left: 8.0434782609vw;
   }
-  .l-fv__mainText, .l-fv__mainText--mlSmallLittleFz, .l-fv__mainText--smallFz, .l-fv__mainText--littleSmallFz, .l-fv__mainText--bigFz {
+  .top .l-fv__mainText, .top .l-fv__mainText--mlSmallLittleFz, .top .l-fv__mainText--smallFz, .top .l-fv__mainText--littleSmallFz, .top .l-fv__mainText--bigFz {
     font-size: min(4.082rem, 4.4369565217vw);
   }
-  .l-fv__mainText--mlSmallLittleFz {
+  .top .l-fv__mainText--mlSmallLittleFz {
     font-size: 0.8333em;
     margin-left: -0.9rem;
   }
-  .l-fv__mainText--smallFz {
+  .top .l-fv__mainText--smallFz {
     font-size: 0.916em;
   }
-  .l-fv__mainText--littleSmallFz {
+  .top .l-fv__mainText--littleSmallFz {
     font-size: 0.8333em;
     margin-left: 0.4rem;
   }
-  .l-fv__mainText--bigFz {
+  .top .l-fv__mainText--bigFz {
     font-size: 1.1667em;
   }
-  .l-fv::after {
+  .top .l-fv::after, .top .l-fv--concept::after {
     display: none;
   }
 }
 @media (min-width: 767px) and (max-width: 850px) {
-  .l-fv__textBox {
+  .top .l-fv__textBox {
     margin-left: 4%;
   }
 }
 @media screen and (min-width: 1920px) {
-  .l-fv {
+  .l-fv, .l-fv--concept {
     max-width: 192rem;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -729,16 +812,17 @@ a {
     margin-left: auto;
     z-index: 10;
     background-color: var(--black);
+    margin-right: 2.1527777778%;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 920px) {
-  .l-bigWrapper {
+  .top .l-bigWrapper {
     margin-right: 4.7826086957vw;
   }
 }
 @media screen and (min-width: 921px) {
-  .l-bigWrapper {
+  .top .l-bigWrapper {
     margin-right: 2.1527777778%;
   }
 }
@@ -811,7 +895,7 @@ a {
 -----------------------------------------------
 ------------------ */
 .c-drawerMenu {
-  display: block;
+  display: none;
   position: fixed;
   z-index: 2;
   top: 0;

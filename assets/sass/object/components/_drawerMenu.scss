@@ -4,7 +4,8 @@
 @use "../../global" as g;
 
 .c-drawerMenu {
-  display: block;
+  display: none;
+  // display: block;
   position: fixed;
   z-index: 2;
   top: 0;
