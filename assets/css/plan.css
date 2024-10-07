@@ -96,8 +96,8 @@
       -ms-flex-align: center;
           align-items: center;
   min-height: 8.9rem;
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 .p-planCourse__link--party .p-planCourse__price, .p-planCourse__link--party .p-planCourse__price--fzSmall {
   margin-top: 0.5rem;
@@ -105,18 +105,17 @@
   font-weight: 500;
   font-family: var(--en);
   line-height: 1;
-  color: var(--white);
 }
 .p-planCourse__link--party .p-planCourse__plan {
   margin-top: 0.5rem;
   font-size: 2rem;
   font-weight: 500;
   line-height: 150%;
-  color: var(--white);
 }
 @media (min-width: 767px) {
   .p-planCourse__link:hover, .p-planCourse__link--party:hover {
-    opacity: 0.65;
+    background-color: var(--white);
+    color: var(--black);
   }
 }
 .p-planCourse__price, .p-planCourse__price--fzSmall {
@@ -135,7 +134,6 @@
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1;
-  color: var(--white);
 }
 
 /* p-planPersonal

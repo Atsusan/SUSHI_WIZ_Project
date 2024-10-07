@@ -47,7 +47,7 @@
         justify-content: center;
         align-items: center;
         min-height: 8.9rem;
-        transition: opacity 0.4s;
+        transition: all 0.4s;
 
         &--party {
             @extend .p-planCourse__link;
@@ -58,7 +58,6 @@
                 font-weight: 500;
                 font-family: var(--en);
                 line-height: 1;
-                color: var(--white);
             }
 
             .p-planCourse__plan {
@@ -66,13 +65,13 @@
                 font-size: 2rem;
                 font-weight: 500;
                 line-height: 150%;
-                color: var(--white);
             }
         }
 
         &:hover {
             @include g.hover {
-                opacity: 0.65;
+                background-color: var(--white);
+                color: var(--black);
             }
         }
     }
@@ -95,7 +94,6 @@
         font-size: 1.4rem;
         font-weight: 500;
         line-height: 1;
-        color: var(--white);
     }
 
 }
