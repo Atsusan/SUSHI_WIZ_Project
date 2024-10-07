@@ -381,7 +381,11 @@ th {
 ----------------------------------------------------------------- */
 :root {
   --white: #F9F9F9;
+  --liteWhite: #dcdada;
   --black: #211E1E;
+  --liteBlack: #363434;
+  --gray: #4b4848;
+  --red: #bf2a2f;
   --en: "Montserrat", system-ui, sans-serif;
   --en2: "Sawarabi Gothic", system-ui, sans-serif;
   --ja: "Noto Sans JP", "Meiryo", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;

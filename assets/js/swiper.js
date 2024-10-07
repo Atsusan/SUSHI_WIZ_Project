@@ -54,3 +54,59 @@ const swiperNews = new Swiper('.js-swiperNews', {
         prevEl: ".js-swiperNews__prev",
     },
 });
+
+
+// Planページの共通swiper設定
+const defaultSwiperSettings = {
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    speed: 1000,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+};
+
+// swiperPlan1 設定
+const swiperPlan1 = new Swiper('#planPersonal1', {
+    ...defaultSwiperSettings,
+    pagination: {
+        el: "#planPersonal1 .p-planPersonal__pagination",
+        clickable: true,
+    },
+});
+// swiperPlan2 設定
+const swiperPlan2 = new Swiper('#planPersonal2', {
+    ...defaultSwiperSettings,
+    pagination: {
+        el: "#planPersonal2 .p-planPersonal__pagination",
+        clickable: true,
+    },
+});
+// swiperPlan3 設定
+const swiperPlan3 = new Swiper('#planPersonal3', {
+    ...defaultSwiperSettings,
+    pagination: {
+        el: "#planPersonal3 .p-planPersonal__pagination",
+        clickable: true,
+    },
+});
+// swiperPlan4
+const swiperPlan4 = new Swiper('#planPersonal4', {
+    ...defaultSwiperSettings,
+    pagination: {
+        el: "#planPersonal4 .p-planPersonal__pagination",
+        clickable: true,
+    },
+});
+// swiperPlan5
+const swiperPlan5 = new Swiper('#planAlcohol1', {
+    ...defaultSwiperSettings,
+    pagination: {
+        el: "#planAlcohol1 .p-planAlcohol__pagination",
+        clickable: true,
+    },
+});
