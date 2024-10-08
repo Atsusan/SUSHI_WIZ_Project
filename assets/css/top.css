@@ -799,13 +799,20 @@
 }
 .p-topNews__link {
   display: block;
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s;
+  -webkit-transition: scale 0.4s;
+  transition: scale 0.4s;
 }
 @media (min-width: 767px) {
-  .p-topNews__link:hover {
-    opacity: 0.65;
+  .p-topNews__link:hover .p-topNews__img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
+}
+.p-topNews__imgBox {
+  display: block;
+  overflow: hidden;
+  max-width: 30rem;
+  width: 100%;
 }
 .p-topNews__img {
   width: 100%;
@@ -813,6 +820,10 @@
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: 3/2; /* どのサイズが来ても対応 */
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 .p-topNews__textBox {
   display: -webkit-box;

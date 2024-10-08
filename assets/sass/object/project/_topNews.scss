@@ -34,17 +34,22 @@
 
     &__link {
         display: block;
-        transition: opacity .4s;
+        transition: scale .4s;
 
         &:hover {
             @include g.hover {
-                opacity: .65;
+                .p-topNews__img {
+                    transform: scale(1.1);
+                }
             }
         }
     }
 
     &__imgBox {
-        //
+        display: block;
+        overflow: hidden;
+        max-width: 30rem;
+        width: 100%;
     }
 
     &__img {
@@ -52,6 +57,7 @@
         height: auto;
         object-fit: cover;
         aspect-ratio: 3 / 2; /* どのサイズが来ても対応 */
+        transition: transform .4s;
     }
 
     &__textBox {
