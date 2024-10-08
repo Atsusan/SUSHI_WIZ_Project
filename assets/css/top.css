@@ -529,7 +529,7 @@
 }
 @media (min-width: 767px) {
   .p-topPlan__link:hover::before {
-    opacity: 0.65;
+    opacity: 0.42;
   }
 }
 .p-topPlan__title {
