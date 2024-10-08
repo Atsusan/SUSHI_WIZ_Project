@@ -6,6 +6,9 @@
 .p-profileContents {
     background: url(../images/profile-contents-bg.jpg) no-repeat center top/cover;
     padding: 6.4rem 0 6rem;
+    @include g.tabletS {
+        padding-top: 15.6rem;
+    }
     
     &__inner {
         padding: 0 3rem;

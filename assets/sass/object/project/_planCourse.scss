@@ -6,6 +6,9 @@
 .p-planCourse {
     background: url(../images/plan-course-bg.jpg) no-repeat center top/cover;
     padding-top: 8rem;
+    @include g.tabletS {
+        padding-top: 15rem;
+    }
 
     &__inner {
         padding: 0 3rem;

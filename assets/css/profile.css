@@ -50,6 +50,11 @@
   background: url(../images/profile-contents-bg.jpg) no-repeat center top/cover;
   padding: 6.4rem 0 6rem;
 }
+@media (min-width: 767px) {
+  .p-profileContents {
+    padding-top: 15.6rem;
+  }
+}
 .p-profileContents__inner {
   padding: 0 3rem;
 }

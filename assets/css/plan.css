@@ -51,6 +51,11 @@
   background: url(../images/plan-course-bg.jpg) no-repeat center top/cover;
   padding-top: 8rem;
 }
+@media (min-width: 767px) {
+  .p-planCourse {
+    padding-top: 15rem;
+  }
+}
 .p-planCourse__inner {
   padding: 0 3rem;
 }
