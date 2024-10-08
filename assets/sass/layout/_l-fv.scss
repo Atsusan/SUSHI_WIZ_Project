@@ -3,6 +3,10 @@
 @use "../global" as g;
 
 .l-fv {
+    @include g.tabletS {
+        flex-direction: column
+    }
+
     @include g.tabletM {
         position: fixed;
         top: 0;
@@ -92,7 +96,8 @@
 
     .top &__textBox { /* TOPページのみ */
         @include g.tabletS {
-            margin-top: g.vh(218);
+            margin-top: auto;
+            // margin-top: g.vh(218);
             margin-left: calc(118 / 1440 * 100vw);
         }
     }
@@ -146,6 +151,7 @@
     &__loopImagesContainer {
         @include g.tabletS {
             margin-top: g.vh(126);
+            margin-bottom: g.vh(26);
         }
     }
 }
@@ -200,6 +206,12 @@
         &__textBox {
             margin-left: 4%;
         }
+    }
+}
+
+@media (min-width: 920px) and (max-height: 700px) {
+    .l-fv__loopImagesContainer {
+        margin-top: g.vh(35);
     }
 }
 
