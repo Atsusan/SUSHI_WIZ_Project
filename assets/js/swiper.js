@@ -63,9 +63,9 @@ const defaultSwiperSettings = {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
-    speed: 1000,
+    speed: 2000,
     autoplay: {
-        delay: 3000,
+        delay: 3500,
         disableOnInteraction: false,
     },
 };
