@@ -810,7 +810,6 @@ a {
     margin-top: 8.7rem;
   }
   .top .l-fv__textBox {
-    margin-top: 17.0822942643svh;
     margin-left: 8.0434782609vw;
   }
   .top .l-fv__mainText, .top .l-fv__mainText--mlSmallLittleFz, .top .l-fv__mainText--smallFz, .top .l-fv__mainText--littleSmallFz, .top .l-fv__mainText--bigFz {
@@ -829,6 +828,9 @@ a {
   }
   .top .l-fv__mainText--bigFz {
     font-size: 1.1667em;
+  }
+  .top .l-fv__loopImagesContainer {
+    margin-bottom: 7.4408117249vh;
   }
   .top .l-fv::after, .top .l-fv--concept::after, .top .l-fv--profile::after, .top .l-fv--plan::after, .top .l-fv--contact::after {
     display: none;

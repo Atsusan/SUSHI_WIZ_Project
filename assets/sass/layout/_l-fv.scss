@@ -170,7 +170,7 @@
         }
 
         &__textBox {
-            margin-top: calc(137 / 802 * 100svh);
+            // margin-top: calc(137 / 802 * 100svh);
             margin-left: calc(74 / 920 * 100vw);
         }
 
@@ -193,6 +193,10 @@
             &--bigFz {
                 font-size: 1.1667em;
             }
+        }
+
+        &__loopImagesContainer {
+            margin-bottom: g.vh(66);
         }
 
         &::after {
