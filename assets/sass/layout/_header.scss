@@ -28,15 +28,54 @@
         }
     }
 
+    &__logoPc {
+        display: none;
+        @include g.tabletS {
+            display: block;
+            width: fit-content;
+            position: absolute;
+            top: 3.6em;
+            left: 4.6rem;
+            transition: opacity .4s;
+        }
+
+        &:hover {
+            @include g.hover {
+                opacity: 0.65;
+            }
+        }
+    }
+
     &__logo {
         padding-top: 1rem;
         width: 100%;
+        transition: opacity .4s;
+        @include g.tabletM {
+            display: none;
+        }
+
+        &:hover {
+            @include g.hover {
+                opacity: 0.65;
+            }
+        }
+
+        .top & {
+            display: block;
+        }
     }
 
     &__logoLink {
         display: block;
         max-width: 6.9rem;
         width: 100%;
+        @include g.tabletS {
+            max-width: 12.5rem;
+        }
+
+        .top & {
+            max-width: 6.9rem;
+        }
     }
 
     &__logoImg {

@@ -51,6 +51,11 @@
   position: relative;
   padding: 6.4rem 0 6rem;
 }
+@media (min-width: 767px) {
+  .p-concept1 {
+    padding-top: 15.6rem;
+  }
+}
 .p-concept1__bigText {
   position: absolute;
   top: 15.4rem;

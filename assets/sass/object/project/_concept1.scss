@@ -6,6 +6,9 @@
     background: url(../images/concept1-bg.jpg) no-repeat center top/cover;
     position: relative;
     padding: 6.4rem 0 6rem;
+    @include g.tabletS {
+        padding-top: 15.6rem;
+    }
 
     &__bigText {
         position: absolute;
