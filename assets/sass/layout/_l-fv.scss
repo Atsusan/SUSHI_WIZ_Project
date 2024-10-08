@@ -151,7 +151,6 @@
     &__loopImagesContainer {
         @include g.tabletS {
             margin-top: g.vh(126);
-            margin-bottom: g.vh(26);
         }
     }
 }
@@ -196,6 +195,7 @@
         }
 
         &__loopImagesContainer {
+            margin-top: g.vh(170);
             margin-bottom: g.vh(66);
         }
 

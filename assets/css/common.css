@@ -793,7 +793,6 @@ a {
 @media (min-width: 767px) {
   .l-fv__loopImagesContainer {
     margin-top: 14.2051860203vh;
-    margin-bottom: 2.9312288613vh;
   }
 }
 
@@ -830,6 +829,7 @@ a {
     font-size: 1.1667em;
   }
   .top .l-fv__loopImagesContainer {
+    margin-top: 19.1657271702vh;
     margin-bottom: 7.4408117249vh;
   }
   .top .l-fv::after, .top .l-fv--concept::after, .top .l-fv--profile::after, .top .l-fv--plan::after, .top .l-fv--contact::after {
@@ -1196,6 +1196,12 @@ a {
 .c-cta__line {
   max-width: 5.9rem;
   width: 100%;
+  -webkit-transform: all 0.4s;
+          transform: all 0.4s;
+}
+.c-cta__line:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .c-cta__lineImg {
   width: 100%;
