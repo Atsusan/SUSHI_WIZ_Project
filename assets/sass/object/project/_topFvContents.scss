@@ -9,7 +9,8 @@
     background: url(../images/top-fv-bg.jpg) no-repeat center top/cover;
     @include g.tabletM {
         display: block;
-        min-height: max(100vh, 88.7rem);
+        // min-height: max(100vh, 88.7rem);
+        min-height: 88.7rem;
     }
 
     &__inner {

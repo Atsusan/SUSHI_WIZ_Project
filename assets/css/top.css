@@ -311,7 +311,7 @@
 @media (min-width: 921px) {
   .p-topFvContents {
     display: block;
-    min-height: max(100vh, 88.7rem);
+    min-height: 88.7rem;
   }
 }
 .p-topFvContents__inner {
@@ -415,6 +415,11 @@
           justify-content: center;
 }
 
+@media screen and (min-width: 920px) {
+  .p-topConcept {
+    margin-top: 0;
+  }
+}
 /* p-topProfile
 ----------------------------------------------------------------- */
 .p-topProfile {
