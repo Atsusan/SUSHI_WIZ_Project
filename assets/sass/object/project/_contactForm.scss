@@ -1,0 +1,70 @@
+/* p-contactForm
+----------------------------------------------------------------- */
+@use "../../global" as g;
+
+.p-contactForm {
+
+    &__inner {
+        padding: 0 2.5rem;
+    }
+
+    &__head {
+        padding-top: 6rem;
+        background: url(../images/contact-form-bg.png) no-repeat center top / cover;
+    }
+ 
+    &__read {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: calc(24 / 14);
+        color: var(--white);
+    }
+
+    &__container {
+        background: var(--white);
+    }
+
+    &__form {
+        padding: 6rem 0.5rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    &__dt {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    &__mast {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+        color: var(--red);
+        padding: 0.25rem 0.8rem 0.35rem;
+        border: 1px solid var(--red);
+        border-radius: 1rem;
+    }
+
+    &__name {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1;
+        color: var(--black);
+    }
+
+    &__dd {
+    }
+    &__submit {
+    }
+}

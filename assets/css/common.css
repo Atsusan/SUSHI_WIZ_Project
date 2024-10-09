@@ -631,6 +631,8 @@ a {
   height: 13.8rem;
   border-radius: 50%;
   border: 1px solid var(--white);
+  -webkit-transition: background-color 0.8s;
+  transition: background-color 0.8s;
 }
 .l-header__hamburgerBtn.is-open {
   margin-right: -1.5rem;
@@ -661,6 +663,9 @@ a {
           transform: translate(-50%, -50%) rotate(45deg);
   max-width: 45.64%;
   background-color: var(--black);
+}
+.l-header__hamburgerBtn.is-scroll::before {
+  background-color: rgba(33, 39, 30, 0.8);
 }
 .l-header__hamburgerBox {
   width: 100%;

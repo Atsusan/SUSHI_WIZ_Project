@@ -99,6 +99,7 @@
             height: 13.8rem;
             border-radius: 50%;
             border: 1px solid var(--white);
+            transition: background-color .8s;
         }
 
         /* ボタン位置 設定 */
@@ -136,6 +137,12 @@
               transform: translate(-50%, -50%) rotate(45deg);
               max-width: 45.64%;
               background-color: var(--black);
+            }
+        }
+
+        &.is-scroll {
+            &::before {
+                background-color: rgba(33, 39, 30, 0.8);
             }
         }
     }
