@@ -56,18 +56,18 @@
             @extend .p-planCourse__link;
 
             .p-planCourse__price {
-                margin-top: 0.5rem;
+                margin-top: 0;
+                font-size: 2rem;
+                font-weight: 500;
+                line-height: 150%;
+            }
+
+            .p-planCourse__plan {
+                margin-top: 0.4rem;
                 font-size: 1.4rem;
                 font-weight: 500;
                 font-family: var(--en);
                 line-height: 1;
-            }
-
-            .p-planCourse__plan {
-                margin-top: 0.5rem;
-                font-size: 2rem;
-                font-weight: 500;
-                line-height: 150%;
             }
         }
 
@@ -97,6 +97,13 @@
         font-size: 1.4rem;
         font-weight: 500;
         line-height: 1;
+
+        &--en {
+            @extend .p-planCourse__plan;
+
+            font-weight: 600;
+            font-family: var(--en);
+        }
     }
 
 }

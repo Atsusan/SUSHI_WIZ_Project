@@ -105,17 +105,17 @@
   transition: all 0.4s;
 }
 .p-planCourse__link--party .p-planCourse__price, .p-planCourse__link--party .p-planCourse__price--fzSmall {
-  margin-top: 0.5rem;
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+.p-planCourse__link--party .p-planCourse__plan, .p-planCourse__link--party .p-planCourse__plan--en {
+  margin-top: 0.4rem;
   font-size: 1.4rem;
   font-weight: 500;
   font-family: var(--en);
   line-height: 1;
-}
-.p-planCourse__link--party .p-planCourse__plan {
-  margin-top: 0.5rem;
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 150%;
 }
 @media (min-width: 767px) {
   .p-planCourse__link:hover, .p-planCourse__link--party:hover {
@@ -134,11 +134,15 @@
 .p-planCourse__price--fzSmall {
   font-size: 0.6667em;
 }
-.p-planCourse__plan {
+.p-planCourse__plan, .p-planCourse__plan--en {
   margin-top: 0.8rem;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1;
+}
+.p-planCourse__plan--en {
+  font-weight: 600;
+  font-family: var(--en);
 }
 
 /* p-planPersonal
