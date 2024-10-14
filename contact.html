@@ -143,7 +143,8 @@
                                         <p class="p-contactForm__name">お名前</p>
                                     </dt>
                                     <dd class="p-contactForm__dd">
-                                        <input type="text" name="name" required>
+                                        <input class="p-contactForm__input" type="text" name="name" required
+                                            placeholder="山田　太郎">
                                     </dd>
                                 </div>
                                 <div class="p-contactForm__item">
@@ -152,7 +153,8 @@
                                         <p class="p-contactForm__name">メールアドレス</p>
                                     </dt>
                                     <dd class="p-contactForm__dd">
-                                        <input type="email" name="email" required>
+                                        <input class="p-contactForm__input" type="email" name="email" required
+                                            placeholder="abcd@aa.com">
                                     </dd>
                                 </div>
                                 <div class="p-contactForm__item">
@@ -161,7 +163,8 @@
                                         <p class="p-contactForm__name">電話番号</p>
                                     </dt>
                                     <dd class="p-contactForm__dd">
-                                        <input type="tel" name="telephone" required>
+                                        <input class="p-contactForm__input" type="tel" name="telephone" required
+                                            placeholder="000-1234-5678">
                                     </dd>
                                 </div>
                                 <div class="p-contactForm__item">
@@ -170,7 +173,8 @@
                                         <p class="p-contactForm__name">住所</p>
                                     </dt>
                                     <dd class="p-contactForm__dd">
-                                        <input type="text" name="address" required>
+                                        <input class="p-contactForm__input" type="text" name="address" required
+                                            placeholder="東京都中央区00-0">
                                     </dd>
                                 </div>
                                 <div class="p-contactForm__item">
@@ -179,11 +183,10 @@
                                         <p class="p-contactForm__name">ご要件</p>
                                     </dt>
                                     <dd class="p-contactForm__dd">
-                                        <select name="inquiry_type" required>
-                                            <option value="">選択してください</option>
-                                            <option value="catering">出張寿司について</option>
-                                            <option value="other">その他</option>
-                                        </select>
+                                        <div class="p-contactForm__radioBox">
+                                            <label class="p-contactForm__radioLabel"><input class="p-contactForm__radioInput" type="radio" name="radio" required>出張寿司について</label>
+                                            <label class="p-contactForm__radioLabel"><input class="p-contactForm__radioInput" type="radio" name="radio">その他</label>
+                                        </div>
                                     </dd>
                                 </div>
                                 <div class="p-contactForm__item">
@@ -192,12 +195,12 @@
                                         <p class="p-contactForm__name">お問い合わせ内容</p>
                                     </dt>
                                     <dd class="p-contactForm__dd">
-                                        <textarea name="message" required></textarea>
+                                        <textarea class="p-contactForm__textarea" name="message" required placeholder="お問い合わせ内容をご入力ください。"></textarea>
                                     </dd>
                                 </div>
                             </dl>
-                            <div class="p-contactForm__submit">
-                                <input type="submit" value="送信する">
+                            <div class="p-contactForm__submitBox">
+                                <input class="p-contactForm__submit" type="submit" value="入力内容をする">
                             </div>
                         </form>
                     </div>
@@ -207,7 +210,7 @@
 
             <!-- ▼ CTA -->
             <section class="c-cta">
-                <div class="c-cta__inner"> 
+                <div class="c-cta__inner">
                     <div class="c-cta__textBox">
                         <h2 class="c-cta__title">RESERVATION</h2>
                         <p class="c-cta__read">
