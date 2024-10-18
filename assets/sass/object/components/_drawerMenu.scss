@@ -4,8 +4,7 @@
 @use "../../global" as g;
 
 .c-drawerMenu {
-  display: none;
-  // display: block;
+  display: block;
   position: fixed;
   z-index: 2;
   top: 0;
@@ -14,138 +13,309 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-  max-height: 39.5rem;
   background: transparent;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 1.2s .5s ease, visibility 1.2s .5s ease;
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease;
 
   &.is-open {
-    opacity: 0;// デバック
+    opacity: 1;
     visibility: visible;
-    transition: opacity .6s .2s ease, visibility .6s .2s ease;
-
-    &::before {
-      transform: scale(60);
-      transition: transform 0.75s ease-in-out;
-    }
-
-    .c-drawerMenu__inner {
-      //
-    }
-
-    .c-drawerMenu__wrap {
-      opacity: 1;
-      visibility: visible;
-      transition: opacity .5s .3s ease, visibility .5s .3s ease;
-    }
-  }
-
-  &::before {
-    content: "";
-    display: inline-block;
-    width: 10vw;
-    height: 10vw;
-    border-radius: 100%;
-    background: var(--black);
-    position: absolute;
-    z-index: 1;
-    top: -5vw;
-    right: -5vw;
-    transform: scale(0);
-    transition: transform 1.2s ease-in-out;
-    @media screen and (max-width: 375px) {
-      width: 37.5px;
-      height: 37.5px;
-    }
+    transition:
+    opacity 0.6s ease,
+    visibility 0.6s ease;
   }
 
   &__inner {
+    padding-top: 8.7rem;
+    padding-bottom: 6rem;
     width: 100%;
-    height: 100%;
+    height: min(75.4rem, 100vh);
     overflow: auto;
     z-index: 3;
-    padding: 24.4px 35.2px 217px;
+    background: var(--black);
+    @include g.tabletS {
+      padding-top: 3rem;
+      padding-bottom: 4rem;
+      height: 100%;
+    }
   }
 
   &__wrap {
-    position: relative;
-    z-index: 4;
-    overflow: auto;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .5s .3s ease, visibility .5s .3s ease;
-  }
-
-  &__topBox {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__logo {
-    max-width: 37.46px;
-    width: 100%;
+    @include g.tabletS {
+      position: relative;
+    }
   }
 
   &__logoLink {
-    display: block;
-    width: 100%;
+    @include g.tabletS {
+      max-width: 12.6rem;
+      position: absolute;
+      top: 1.8rem;
+      left: 4.6rem;
+    }
   }
 
   &__logoImg {
     width: 100%;
   }
 
-  &__closeBtn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32.32px;
-    height: 32.32px;
-    cursor: pointer;
-    margin-right: -8.08px;
+  &__headingBox {
+    text-align: center;
   }
 
-  &__closeIcon {
-    max-width: 16.16px;
-    width: 100%;
+  &__heading {
+    font-size: 3.6rem;
+    font-weight: 500;
+    font-family: var(--en);
+    line-height: 150%;
+    color: var(--white);
+    @include g.tabletS {
+      font-size: 4.8rem;
+    }
   }
 
   &__nav {
-    margin-top: 29px;
-    padding: 0px 3px;
+    margin-top: 1.6rem;
+    @include g.tabletS {
+      margin-top: 4.2rem;
+    }
   }
 
   &__menu {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(11px, g.vw_sp(11), 18.7px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include g.tabletS {
+      display: flex;
+    }
   }
 
   &__menuItem {
-    //
+    border-top: 1px solid var(--white);
+    width: 100%;
+    @include g.tabletS {
+      border-bottom: 1px solid var(--white);
+    }
+
+    &:not(:first-child) {
+      @include g.tabletS {
+        border-left: 1px solid var(--white);
+      }
+    }
+
+    /* SP時の指定 Start */
+    &:first-child {
+      @media screen and (max-width: 767px) {
+        order: 1;
+        border-right: 1px solid var(--white);
+      }
+    }
+
+    &:nth-child(2) {
+      @media screen and (max-width: 767px) {
+        order: 3;
+        border-right: 1px solid var(--white);
+      }
+    }
+
+    &:nth-child(3) {
+      @media screen and (max-width: 767px) {
+        order: 2;
+      }
+    }
+
+    &:nth-child(4) {
+      @media screen and (max-width: 767px) {
+        order: 5;
+        border-right: 1px solid var(--white);
+        border-bottom: 1px solid var(--white);
+      }
+    }
+
+    &:nth-child(5) {
+      @media screen and (max-width: 767px) {
+        order: 4;
+      }
+    }
+
+    &:last-child {
+      @media screen and (max-width: 767px) {
+        order: 6;
+      }
+    }
+    /* SP時の指定 End */
   }
 
   &__menuLink {
     display: flex;
     flex-direction: column;
-    gap: clamp(3px, g.vw_sp(3), 5.1px);
-    font-family: var(--mincho);
-    font-size: clamp(25px, g.vw_sp(25), 42.5px);
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 100%;
+    height: 100%;
+    min-height: 8.3rem;
+    font-size: 2.4rem;
+    font-weight: 600;
+    font-family: var(--en);
     line-height: 1;
-    font-weight: bold;
-    white-space: nowrap;
-    color: var(--brawn);
-  }
-  
-  &__subText {
-    display: block;
-    font-size: 0.4em;
-    letter-spacing: 0.2em;
+    color: var(--white);
+
+    &:active { // スマホ・タブレット タップ時の色
+      background: var(--white);
+      color: var(--black);
+    }
+
+    &:hover {
+      @include g.hover {
+        background: var(--white);
+        color: var(--black);
+      }
+    }
   }
 
-  &__linkBox {
-    margin-top: 18px;
+  &__subText {
+    font-size: 0.5833em;
+    font-weight: 500;
+    font-family: var(--ja);
+  }
+
+  &__bottomContents {
+    margin-top: 1.6rem;
+    @include g.tabletS {
+      margin-top: 4rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4rem 8rem;
+    }
+  }
+
+  &__btnWrap {
+    padding: 0 2.5rem;
+    @include g.tabletS {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 76rem;
+      gap: 6rem;
+    }
+  }
+
+  &__btnContact {
+    @include g.tabletS {
+      width: 100%;
+      max-width: 34rem;
+    }
+  }
+
+  &__btnResevation {
+    margin-top: 2rem;
+    @include g.tabletS {
+      margin-top: 0;
+      width: 100%;
+      max-width: 34rem;
+    }
+  }
+
+  &__btnLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 34rem;
+    padding: 2.1rem 0 1.9rem;
+    font-size: 2.4rem;
+    font-weight: 600;
+    font-family: var(--en);
+    line-height: 1;
+    background: var(--white);
+    color: var(--black);
+    transition: opacity 0.3s;
+
+    &--bgImage {
+      @extend .c-drawerMenu__btnLink;
+      background: url(../images/common/cta-btn.jpg) no-repeat center center / cover;
+      color: var(--white);
+    }
+
+    &:hover {
+      @include g.hover {
+        opacity: 0.65;
+      }
+    }
+  }
+
+  &__btnSubText {
+    font-size: 0.583333em;
+    font-weight: 500;
+  }
+
+  &__btnMainText {
+    margin-top: 0.7rem;
+    display: inline-block;
+  }
+
+  &__snsBox {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include g.tabletS {
+      max-width: 27.8rem;
+      justify-content: flex-start;
+      width: fit-content;
+    }
+  }
+
+  &__snsBox {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    @include g.tabletS {
+      margin-top: 0;
+      width: 100%;
+      justify-content: center;
+      gap: 8rem;
+    }
+  }
+
+  &__snsItem {
+    max-width: 5.9rem;
+    width: 100%;
+    @include g.tabletS {
+      max-width: 7rem;
+    }
+  }
+
+  &__snsLink {
+    display: block;
+    max-width: 5.9rem;
+    width: 100%;
+    transform: all 0.4s;
+    @include g.tabletS {
+      max-width: 7rem;
+    }
+
+    &:active {
+      transform: scale(1.1);
+    }
+
+    &:hover {
+      @include g.hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__snsImg {
+    width: 100%;
   }
 }

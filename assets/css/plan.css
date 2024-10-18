@@ -270,10 +270,12 @@
 .p-planPersonal .swiper-pagination-bullet-active {
   background-color: var(--black);
 }
-.p-planPersonal .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet .swiper-pagination-bullet, .p-planPersonal .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.p-planPersonal .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet .swiper-pagination-bullet,
+.p-planPersonal .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0;
 }
-.p-planPersonal .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet .swiper-pagination-bullet:not(:first-child), .p-planPersonal .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:first-child) {
+.p-planPersonal .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet .swiper-pagination-bullet:not(:first-child),
+.p-planPersonal .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:first-child) {
   margin-left: 1.2rem;
 }
 
@@ -430,10 +432,12 @@
 .p-planAlcohol .swiper-pagination-bullet-active {
   background-color: var(--white);
 }
-.p-planAlcohol .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet .swiper-pagination-bullet, .p-planAlcohol .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.p-planAlcohol .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet .swiper-pagination-bullet,
+.p-planAlcohol .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0;
 }
-.p-planAlcohol .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet .swiper-pagination-bullet:not(:first-child), .p-planAlcohol .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:first-child) {
+.p-planAlcohol .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet .swiper-pagination-bullet:not(:first-child),
+.p-planAlcohol .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:first-child) {
   margin-left: 1.2rem;
 }
 .p-planAlcohol__planImgBox {

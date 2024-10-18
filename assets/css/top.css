@@ -880,7 +880,8 @@
   margin-top: 2.2rem;
   height: 100%;
 }
-.p-topNews__swiperPaginationBox { /* 数字によって左右が動いてしまうのを阻止 */
+.p-topNews__swiperPaginationBox {
+  /* 数字によって左右が動いてしまうのを阻止 */
   min-width: 3.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -957,8 +958,12 @@
   -webkit-transform: scale(0.7) !important;
           transform: scale(0.7) !important;
 }
-.p-topNews .swiper-pagination-current { /* 現在のスライド番号 */ }
-.p-topNews .swiper-pagination-total { /* スライド総数 */ }
+.p-topNews .swiper-pagination-current {
+  /* 現在のスライド番号 */
+}
+.p-topNews .swiper-pagination-total {
+  /* スライド総数 */
+}
 
 /* u-display-none
 ----------------------------------------------------------------- */

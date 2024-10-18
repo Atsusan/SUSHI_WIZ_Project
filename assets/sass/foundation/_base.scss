@@ -4,11 +4,13 @@
 
 :root {
   // カスタムプロパティをここに書いていただきたいです。
+  --scrollbar-width: 0;
+
   // color
-  --white: #F9F9F9;
+  --white: #f9f9f9;
   --white2: #f3f3f3;
   --liteWhite: #dcdada;
-  --black: #211E1E;
+  --black: #211e1e;
   --liteBlack: #363434;
   --gray: #4b4848;
   --liteGray: #a5a9b2;
@@ -18,7 +20,8 @@
   // font-family
   --en: "Montserrat", system-ui, sans-serif;
   --en2: "Sawarabi Gothic", system-ui, sans-serif;
-  --ja: "Noto Sans JP", "Meiryo", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  --ja: "Noto Sans JP", "Meiryo", "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    sans-serif;
 }
 
 html {
@@ -38,6 +41,46 @@ body {
     overflow: hidden;
     height: 100%;
   }
+
+  .l-bigWrapper {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      visibility: hidden;
+      background-color: rgba(0,0,0,0.5);
+      transition:
+      opacity 0.8s .1s ease,
+      visibility 0.8s .1s ease;
+      pointer-events: none;
+    }
+  }
+
+  &.is-open {
+    overflow: hidden; /* スクロールを無効化 */
+    padding-right: var(--scrollbar-width, 0); /* スクロールバー分の幅を確保 */
+
+    .l-header {
+      height: 12.4rem; /* ドロワーの見切れ防止 */
+    }
+
+    .l-bigWrapper {
+      &::before {
+        @media screen and (max-width: 767px) {
+          content: "";
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
 }
 
 main {
@@ -50,7 +93,7 @@ img {
 }
 
 a {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .error {

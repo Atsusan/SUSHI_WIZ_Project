@@ -18,19 +18,19 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="./assets/css/common.css" />
-  <link rel="stylesheet" href="./assets/css/contact.css" />
+  <link rel="stylesheet" href="./assets/css/faq.css" />
 </head>
 
 <body class="contact">
   <!-- ▼ PC FV Start -->
-  <div class="l-fv--contact u-displayNone--PU">
+  <div class="l-fv--faq u-displayNone--PU">
     <h1 class="l-header__logoPc">
       <a href="/" class="l-header__logoLink">
         <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="l-header__logoImg" width="69" height="64" />
       </a>
     </h1>
     <div class="l-fv__textBox">
-      <p class="l-fv__enTitle">CONTACT</p>
+      <p class="l-fv__enTitle">FAQ</p>
     </div>
   </div>
   <!-- ▲ PC FV End-->
@@ -104,102 +104,145 @@
 
     <!-- ▼ main -->
     <main>
-      <!-- ▼ p-contactFv SP -->
-      <section class="p-contactFv">
-        <div class="p-contactFv__textContents">
-          <div class="p-contactFv__inner">
-            <div class="p-contactFv__textBox">
-              <p class="p-contactFv__enTitle">CONTACT</p>
+      <!-- ▼ p-faqFv SP -->
+      <section class="p-faqFv">
+        <div class="p-faqFv__textContents">
+          <div class="p-faqFv__inner">
+            <div class="p-faqFv__textBox">
+              <p class="p-faqFv__enTitle">FAQ</p>
             </div>
           </div>
         </div>
       </section>
-      <!-- ▲ p-contactFv SP -->
+      <!-- ▲ p-faqFv SP -->
 
-      <!-- ▼ p-contactForm -->
-      <section class="p-contactForm">
-        <div class="p-contactForm__head">
-          <div class="p-contactForm__inner">
-            <p class="p-contactForm__read">
-              当サイトをご覧いただきありがとうございます。<br />
-              下記フォームよりお気軽にお問い合わせください。
-            </p>
+      <!-- ▼ p-faqAccordion -->
+      <section class="p-faqAccordion">
+        <div class="p-faqAccordion__inner">
+          <h2 class="p-faqAccordion__heading u-displayNone--PU">FAQ</h2>
+          <div class="p-faqAccordion__accordionContainer">
+            <!-- ▼ Accordion Start -->
+            <dl class="c-accordion">
+              <div class="c-accordion__item">
+                <dt class="c-accordion__titleBox" data-accordion="header">
+                  <p class="c-accordion__title">
+                    個人宅以外ではどこで開催が出来ますか？
+                  </p>
+                  <span class="c-accordion__icon" data-accordion="icon"></span>
+                </dt>
+                <dd class="c-accordion__content">
+                  <div class="c-accordion__body">
+                    <p class="c-accordion__bodyText">
+                      基本的にどこでも開催出来ます。マンションや公共施設のパーティールームのほか、屋外スペース、貸し切りバーや企業のオフィス（会議室）などでも開催実績があります。キッチンや水場があるのがベストですが、なくても実施可能です。先ずはお気軽にご相談ください。
+                    </p>
+                  </div>
+                </dd>
+              </div>
+              <div class="c-accordion__item">
+                <dt class="c-accordion__titleBox" data-accordion="header">
+                  <p class="c-accordion__title">
+                    当日はどのような準備が必要ですか？
+                  </p>
+                  <span class="c-accordion__icon" data-accordion="icon"></span>
+                </dt>
+                <dd class="c-accordion__content">
+                  <div class="c-accordion__body">
+                    <div class="c-accordion__bodyText">
+                      出張当日は、60分前を目安に職人が事前に準備をさせて頂きます。その際に調理を提供するスペースとして、キッチンスペースやテーブル等をお貸しください。その環境に応じて柔軟に対応致しますので、事前にご相談をお願い致します。お皿や箸等の食器を含めて全て職人が持参しますので、その他の準備は特にございません。
+                    </div>
+                  </div>
+                </dd>
+              </div>
+              <div class="c-accordion__item">
+                <dt class="c-accordion__titleBox" data-accordion="header">
+                  <p class="c-accordion__title">
+                    開催時間は何時間になりますか？
+                  </p>
+                  <span class="c-accordion__icon" data-accordion="icon"></span>
+                </dt>
+                <dd class="c-accordion__content">
+                  <div class="c-accordion__body">
+                    <div class="c-accordion__bodyText">
+                      原則2時間（人数によっては～3時間）でお食事の提供を完了し、職人は帰宅致します。お客様はその後も楽しんで頂いて構いません。
+                    </div>
+                  </div>
+                </dd>
+              </div>
+              <div class="c-accordion__item">
+                <dt class="c-accordion__titleBox" data-accordion="header">
+                  <p class="c-accordion__title">
+                    飲み物は用意して貰えますか？
+                  </p>
+                  <span class="c-accordion__icon" data-accordion="icon"></span>
+                </dt>
+                <dd class="c-accordion__content">
+                  <div class="c-accordion__body">
+                    <div class="c-accordion__bodyText">
+                      別料金となりますが、厳選日本酒のほか、事前にお客様のご要望をお伺いし持参も可能です。また、お客様側でご準備頂いても構いません。
+                    </div>
+                  </div>
+                </dd>
+              </div>
+              <div class="c-accordion__item">
+                <dt class="c-accordion__titleBox" data-accordion="header">
+                  <p class="c-accordion__title">
+                    対応エリアは中央区のみですか？
+                  </p>
+                  <span class="c-accordion__icon" data-accordion="icon"></span>
+                </dt>
+                <dd class="c-accordion__content">
+                  <div class="c-accordion__body">
+                    <div class="c-accordion__bodyText">
+                      ネタの鮮度の関係から東京都内および都内近郊を対象としています。また、交通費がかからないエリア（中央区内等）については出張交通費を割引させて頂きます。上記以外の場所をご希望であっても当日のネタを市場から直接宅配する等の方法により、ご相談頂ければ対応をさせて頂きます。
+                    </div>
+                  </div>
+                </dd>
+              </div>
+              <div class="c-accordion__item">
+                <dt class="c-accordion__titleBox" data-accordion="header">
+                  <p class="c-accordion__title">
+                    お支払方法は何がありますか？
+                  </p>
+                  <span class="c-accordion__icon" data-accordion="icon"></span>
+                </dt>
+                <dd class="c-accordion__content">
+                  <div class="c-accordion__body">
+                    <div class="c-accordion__bodyText">
+                      【カード払い】【現金払い】のいずれかをお選び頂けます。法人様につきましては請求書払
+                      いにも対応させて頂きます。）
+                    </div>
+                  </div>
+                </dd>
+              </div>
+              <div class="c-accordion__item">
+                <dt class="c-accordion__titleBox" data-accordion="header">
+                  <p class="c-accordion__title">キャンセルは出来ますか？</p>
+                  <span class="c-accordion__icon" data-accordion="icon"></span>
+                </dt>
+                <dd class="c-accordion__content">
+                  <div class="c-accordion__body">
+                    <div class="c-accordion__bodyText">
+                      ご予約日の4日前までは無料でキャンセル可能ですが、ご予約日3日前を過ぎてのキャンセルには、下記のキャンセル料をお支払い頂きます。
+                      <br />
+                      <br />
+                      3日前・・・・代金の30％
+                      <br />
+                      前日・・・・代金の50％
+                      <br />
+                      当日・・・・代金全額
+                    </div>
+                  </div>
+                </dd>
+              </div>
+            </dl>
+            <!-- ▲ Accordion End -->
           </div>
         </div>
-        <div class="p-contactForm__container">
-          <div class="p-contactForm__inner">
-            <form action="post" class="p-contactForm__form">
-              <dl class="p-contactForm__list">
-                <div class="p-contactForm__item">
-                  <dt class="p-contactForm__dt">
-                    <span class="p-contactForm__mast">必須</span>
-                    <p class="p-contactForm__name">お名前</p>
-                  </dt>
-                  <dd class="p-contactForm__dd">
-                    <input class="p-contactForm__input" type="text" name="name" required placeholder="山田　太郎" />
-                  </dd>
-                </div>
-                <div class="p-contactForm__item">
-                  <dt class="p-contactForm__dt">
-                    <span class="p-contactForm__mast">必須</span>
-                    <p class="p-contactForm__name">メールアドレス</p>
-                  </dt>
-                  <dd class="p-contactForm__dd">
-                    <input class="p-contactForm__input" type="email" name="email" required placeholder="abcd@aa.com" />
-                  </dd>
-                </div>
-                <div class="p-contactForm__item">
-                  <dt class="p-contactForm__dt">
-                    <span class="p-contactForm__mast">必須</span>
-                    <p class="p-contactForm__name">電話番号</p>
-                  </dt>
-                  <dd class="p-contactForm__dd">
-                    <input class="p-contactForm__input" type="tel" name="telephone" required
-                      placeholder="000-1234-5678" />
-                  </dd>
-                </div>
-                <div class="p-contactForm__item">
-                  <dt class="p-contactForm__dt">
-                    <span class="p-contactForm__mast">必須</span>
-                    <p class="p-contactForm__name">住所</p>
-                  </dt>
-                  <dd class="p-contactForm__dd">
-                    <input class="p-contactForm__input" type="text" name="address" required placeholder="東京都中央区00-0" />
-                  </dd>
-                </div>
-                <div class="p-contactForm__item">
-                  <dt class="p-contactForm__dt">
-                    <span class="p-contactForm__mast">必須</span>
-                    <p class="p-contactForm__name">ご要件</p>
-                  </dt>
-                  <dd class="p-contactForm__dd">
-                    <div class="p-contactForm__radioBox">
-                      <label class="p-contactForm__radioLabel"><input class="p-contactForm__radioInput" type="radio"
-                          name="radio" required />出張寿司について</label>
-                      <label class="p-contactForm__radioLabel"><input class="p-contactForm__radioInput" type="radio"
-                          name="radio" />その他</label>
-                    </div>
-                  </dd>
-                </div>
-                <div class="p-contactForm__item">
-                  <dt class="p-contactForm__dt">
-                    <span class="p-contactForm__mast">必須</span>
-                    <p class="p-contactForm__name">お問い合わせ内容</p>
-                  </dt>
-                  <dd class="p-contactForm__dd">
-                    <textarea class="p-contactForm__textarea" name="message" required
-                      placeholder="お問い合わせ内容をご入力ください。"></textarea>
-                  </dd>
-                </div>
-              </dl>
-              <div class="p-contactForm__submitBox">
-                <input class="p-contactForm__submit" type="submit" value="入力内容をする" />
-              </div>
-            </form>
-          </div>
+        <div class="p-faqAccordion__imgBox">
+          <img src="./assets/images/top-faq-item.jpg" alt="お寿司" class="p-faqAccordion__img" width="780" height="434" />
         </div>
       </section>
-      <!-- ▲ p-contactForm -->
+      <!-- ▲ p-faqAccordion -->
 
       <!-- ▼ CTA -->
       <section class="c-cta">

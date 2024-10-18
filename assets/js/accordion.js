@@ -2,7 +2,9 @@
 
 /* アコーディオンの開閉機能の処理 */
 document.addEventListener("DOMContentLoaded", function () {
-  const accordionTitles = document.querySelectorAll('[data-accordion="header"]');
+  const accordionTitles = document.querySelectorAll(
+    '[data-accordion="header"]',
+  );
 
   function toggleAccordionItem(title) {
     const content = title.nextElementSibling;
