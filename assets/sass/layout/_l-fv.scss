@@ -58,6 +58,20 @@
     }
   }
 
+  /* faq FV */
+  &--faq {
+    @extend .l-fv;
+
+    @include g.tabletS {
+      background: url(../images/faq-fv-bg.jpg) no-repeat center top/cover;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+    }
+  }
+
   /* contact FV */
   &--contact {
     @extend .l-fv;
@@ -72,12 +86,12 @@
     }
   }
 
-  /* faq FV */
-  &--faq {
+  /* article FV */
+  &--article {
     @extend .l-fv;
 
     @include g.tabletS {
-      background: url(../images/faq-fv-bg.jpg) no-repeat center top/cover;
+      background: url(../images/article-fv-bg.jpg) no-repeat center top/cover;
       position: fixed;
       top: 0;
       left: 0;
