@@ -52,7 +52,7 @@ body {
     padding-right: var(--scrollbar-width, 0); /* スクロールバー分の幅を確保 */
 
     .l-header {
-      height: 12.4rem; /* ドロワーの見切れ防止 */
+      height: 13rem; /* ドロワー開閉時の見切れ防止 */
     }
   }
 }
