@@ -257,6 +257,22 @@
   color: var(--white);
 }
 
+/* p-reservationForm
+----------------------------------------------------------------- */
+.p-reservationForm {
+  padding-top: 10rem;
+  width: 100%;
+  height: min(100%, 100vh);
+}
+.p-reservationForm__wrap {
+  width: 100%;
+  height: 100vh;
+}
+.p-reservationForm__form {
+  width: 100%;
+  height: 100vh;
+}
+
 /* u-display-none
 ----------------------------------------------------------------- */
 .u-displayNone--PU {
