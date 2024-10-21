@@ -1,19 +1,4 @@
-// top slide loop text
-// const swiperText = new Swiper('.js-swiperText', {
-//     centeredSlides: true,
-//     slidesPerView: "auto",
-//     spaceBetween: 30,
-//     loop: true,
-//     speed: 5000,
-//     cssEase: 'linear',
-//     pauseOnFocus: false,
-//     allowTouchMove: false,
-//     autoplay: {
-//         delay: 0,
-//         disableOnInteraction: false,
-//         reverseDirection: true,
-//     },
-// });
+"use strict";
 
 // top slide loop images
 const swiperImages = new Swiper(".js-swiperImages", {
@@ -58,11 +43,11 @@ const swiperNews = new Swiper(".js-swiperNews", {
 // Planページの共通swiper設定
 const defaultSwiperSettings = {
   grabCursor: true,
-  centeredSlides: true,
   slidesPerView: 1,
   spaceBetween: 20,
   loop: true,
-  speed: 2000,
+  speed: 1000,
+  touchRatio: 0.5,
   autoplay: {
     delay: 3500,
     disableOnInteraction: false,

@@ -294,14 +294,9 @@
 /* p-articleSingle
 ----------------------------------------------------------------- */
 .p-articleSingle {
-  padding-top: 5.2rem;
+  padding-top: 14.4rem;
   padding-bottom: 4.6rem;
   background: url(../images/article-contents-bg.jpg) no-repeat center top/cover;
-}
-@media (min-width: 767px) {
-  .p-articleSingle {
-    padding-top: 14.4rem;
-  }
 }
 .p-articleSingle__inner {
   padding: 0 4.5rem;

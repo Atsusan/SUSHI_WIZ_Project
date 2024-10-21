@@ -14,8 +14,8 @@
     right: calc(31 / 1440 * 100%);
     overflow: hidden;
     height: 8.4rem;
-    height: 30rem;
     max-width: 39rem;
+    transition: height 0.4s; /* ドロワーを閉じる際にドロワーが見切れ防止 */
   }
 
   &__inner {

@@ -421,7 +421,13 @@ body.is-open {
   padding-right: var(--scrollbar-width, 0); /* スクロールバー分の幅を確保 */
 }
 body.is-open .l-header {
-  height: 13rem; /* ドロワー開閉時の見切れ防止 */
+  height: 20rem; /* ドロワー開閉時の見切れ防止 */
+}
+@media (min-width: 767px) {
+  body.is-open .l-header__logo {
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 
 main {
@@ -442,7 +448,7 @@ a {
   text-align: center;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 766px) {
   html {
     font-size: 2.5641025641vw;
   }
@@ -552,8 +558,9 @@ a {
     right: 2.1527777778%;
     overflow: hidden;
     height: 8.4rem;
-    height: 30rem;
     max-width: 39rem;
+    -webkit-transition: height 0.4s;
+    transition: height 0.4s; /* ドロワーを閉じる際にドロワーが見切れ防止 */
   }
 }
 .l-header__inner {

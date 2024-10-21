@@ -232,9 +232,15 @@
               <span class="p-planPersonal__sub">1名様あたり</span>
             </div>
             <ul class="p-planPersonal__textList">
-              <li class="p-planPersonal__textItem">豪華バラちらしコース</li>
               <li class="p-planPersonal__textItem">
-                おまかせ10貫（5種類）+ 巻き寿司コース
+                <button class="p-planPersonal__textButton" data-modal-target="#modal1">
+                  豪華バラちらしコース
+                </button>
+              </li>
+              <li class="p-planPersonal__textItem">
+                <button class="p-planPersonal__textButton" data-modal-target="#modal2">
+                  おまかせ10貫（5種類）+ 巻き寿司コース
+                </button>
               </li>
             </ul>
             <!-- ▼ Slide Stat -->
@@ -256,6 +262,62 @@
               </div>
             </div>
             <!-- ▲ Slide End -->
+
+            <!-- ▼ Modal Stat -->
+            <div id="modal1" class="c-modal js-modal" data-modal-target="#modal1">
+              <div class="c-modal__flex">
+                <!-- ▼ Modal Contents Stat -->
+                <div class="c-modal__card">
+                  <button class="c-modal__close js-close">
+                    <img src="./assets/images/common/icon-close.svg" alt="" class="c-modal__closeIcon" width="63" height="63">
+                  </button>
+                  <div class="c-modal__container">
+                    <p class="c-modal__tag">3,000<span class="c-modal__tag--fzSmall">円プラン</span></p>
+                    <div class="c-modal__titleBox">
+                      <p class="c-modal__title">豪華バラちらしコース</p>
+                    </div>
+                    <div class="c-modal__imgBox">
+                      <img src="./assets/images/plan-personal-item1.jpg" alt="" class="c-modal__img" width="660"
+                        height="440">
+                    </div>
+                    <div class="c-modal__textBox">
+                      <p class="c-modal__text">本鮪の大トロやサーモン、ホタテ、光物や甘い玉子焼きを散りばめた豪華バラちらしコース</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- ▲ Modal Contents End -->
+              </div>
+            </div>
+            <!-- ▲ Modal End -->
+
+            <!-- ▼ Modal Stat -->
+            <div id="modal2" class="c-modal js-modal" data-modal-target="#modal2">
+              <div class="c-modal__flex">
+                <!-- ▼ Modal Contents Stat -->
+                <div class="c-modal__card">
+                  <button class="c-modal__close js-close">
+                    <img src="./assets/images/common/icon-close.svg" alt="" class="c-modal__closeIcon" width="63" height="63">
+                  </button>
+                  <div class="c-modal__container">
+                    <p class="c-modal__tag">3,000<span class="c-modal__tag--fzSmall">円プラン</span></p>
+                    <div class="c-modal__titleBox">
+                      <p class="c-modal__title">おまかせ10貫（5種類）＋<br>
+                        巻き寿司コース</p>
+                    </div>
+                    <div class="c-modal__imgBox">
+                      <img src="./assets/images/plan-personal-item1.jpg" alt="" class="c-modal__img" width="660"
+                        height="440">
+                    </div>
+                    <div class="c-modal__textBox">
+                      <p class="c-modal__text">その日の特選のネタ（マグロやサーモン、光物など）を入れたコスパがいいコース</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- ▲ Modal Contents End -->
+              </div>
+            </div>
+            <!-- ▲ Modal End -->
+
           </div>
           <div id="plan2" class="p-planPersonal__planContainer">
             <div class="p-planPersonal__headingBox">
@@ -543,7 +605,7 @@
           </div>
           <div class="c-cta__btnWarap">
             <div class="c-cta__btnContact">
-              <a href="#" class="c-cta__link">
+              <a href="./contact.html" class="c-cta__link">
                 <span class="c-cta__subText">お問い合わせ</span>
                 <span class="c-cta__mainText">CONTACT</span>
               </a>
@@ -578,19 +640,19 @@
             <a href="/" class="l-footer__link">TOP</a>
           </li>
           <li class="l-footer__item">
-            <a href="#" class="l-footer__link">CONCEPT</a>
+            <a href="./concept.html" class="l-footer__link">CONCEPT</a>
           </li>
           <li class="l-footer__item">
-            <a href="#" class="l-footer__link">PROFILE</a>
+            <a href="./profile.html" class="l-footer__link">PROFILE</a>
           </li>
           <li class="l-footer__item">
-            <a href="#" class="l-footer__link">PLAN</a>
+            <a href="./plan.html" class="l-footer__link">PLAN</a>
           </li>
           <li class="l-footer__item">
-            <a href="#" class="l-footer__link">ARTICLE</a>
+            <a href="./article.html" class="l-footer__link">ARTICLE</a>
           </li>
           <li class="l-footer__item">
-            <a href="#" class="l-footer__link">CONTACT</a>
+            <a href="./contact.html" class="l-footer__link">CONTACT</a>
           </li>
           <li class="l-footer__item">
             <a href="#" class="l-footer__link">RESERVATION</a>
@@ -608,6 +670,7 @@
   </div>
   <!-- ▲ contents End -->
 
+  <script src="./assets/js/modal.js"></script>
   <script src="./assets/js/scroll.js"></script>
   <script src="./assets/js/smooth-scroll.js"></script>
   <script src="./assets/js/drawer.js"></script>

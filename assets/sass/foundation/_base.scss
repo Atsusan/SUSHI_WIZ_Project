@@ -52,7 +52,14 @@ body {
     padding-right: var(--scrollbar-width, 0); /* スクロールバー分の幅を確保 */
 
     .l-header {
-      height: 13rem; /* ドロワー開閉時の見切れ防止 */
+      height: 20rem; /* ドロワー開閉時の見切れ防止 */
+    }
+
+    .l-header__logo {
+      @include g.tabletS {
+        visibility: hidden;
+        opacity: 0;
+      }
     }
   }
 }
@@ -74,7 +81,7 @@ a {
   text-align: center;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 766px) {
   html {
     font-size: calc(1000vw / 390);
   }

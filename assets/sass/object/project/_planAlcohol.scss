@@ -114,6 +114,17 @@
     }
   }
 
+  &__textButton {
+    text-decoration: underline;
+    transition: opacity 0.4s;
+
+    &:hover {
+      @include g.hover {
+      opacity: 0.65;
+      }
+    }
+  }
+
   &__swiperContainer {
     margin-top: 3rem;
     overflow: hidden;

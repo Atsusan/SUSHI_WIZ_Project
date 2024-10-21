@@ -1,3 +1,5 @@
+"use strict";
+
 // リサイズイベントを監視する関数を追加
 window.addEventListener("resize", updateAnimationSpeed);
 

@@ -125,7 +125,6 @@
     /* TOPページのみ */
     @include g.tabletS {
       margin-top: auto;
-      // margin-top: g.vh(218);
       margin-left: calc(118 / 1440 * 100vw);
     }
   }
@@ -199,7 +198,6 @@
     }
 
     &__textBox {
-      // margin-top: calc(137 / 802 * 100svh);
       margin-left: calc(74 / 920 * 100vw);
     }
 
