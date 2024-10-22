@@ -1088,6 +1088,12 @@ a {
   -webkit-transition: opacity 0.8s ease, visibility 0.8s ease;
   transition: opacity 0.8s ease, visibility 0.8s ease;
 }
+@media screen and (min-width: 1920px) {
+  .c-drawerMenu {
+    max-width: 192rem;
+    margin: 0 auto;
+  }
+}
 .c-drawerMenu::after {
   content: "";
   position: absolute;
