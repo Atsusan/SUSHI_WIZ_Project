@@ -863,10 +863,14 @@
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
-.p-topNews__title {
+.p-topNews__title, .p-topNews__title--none {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.p-topNews__title--none {
+  margin: 0 auto;
+  font-size: 1.4rem;
 }
 .p-topNews__swiperController {
   position: relative;

@@ -24,13 +24,10 @@
 
   &__filterItem {
     width: 100%;
+    border-top: 1px solid var(--black);
 
     &:nth-child(odd) {
       border-right: 1px solid var(--black);
-    }
-
-    &:nth-child(n + 2) {
-      border-top: 1px solid var(--black);
     }
 
     &:nth-last-child(2) {
