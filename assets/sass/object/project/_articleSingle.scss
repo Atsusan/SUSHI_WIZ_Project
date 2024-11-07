@@ -175,3 +175,54 @@
     line-height: 1;
   }
 }
+
+.c-privacy {
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--black);
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+
+  }
+
+  h3,h4,h5,h6 {
+    font-size: 1.8rem;
+  }
+
+  p,li,span,div {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: calc(24 / 14);
+    color: var(--black);
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    margin: 1.6rem auto 0;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: center;
+  }
+}
